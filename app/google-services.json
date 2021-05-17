@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "928278942719",
+    "project_id": "snhl-bank",
+    "storage_bucket": "snhl-bank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928278942719:android:6b7fde4f85e87b27364dca",
+        "android_client_info": {
+          "package_name": "nnhl.project.ebank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928278942719-th8bstrs9i7jl4hi967j029ksu30n7g7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqhSJDtf1p8Iz6ruN-0opCz_lpmAJbv1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928278942719-th8bstrs9i7jl4hi967j029ksu30n7g7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
