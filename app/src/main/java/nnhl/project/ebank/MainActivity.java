@@ -12,5 +12,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         int a  = 5;
         int b = 5;
+        String x = "Nhan test push";
     }
 }
