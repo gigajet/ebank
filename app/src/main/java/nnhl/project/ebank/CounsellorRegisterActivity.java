@@ -25,6 +25,7 @@ public class CounsellorRegisterActivity extends AppCompatActivity implements ICo
         edName=findViewById(R.id.edName);
         edSID=findViewById(R.id.edSID);
         edEmail=findViewById(R.id.edEmail);
+        Toast.makeText(this,"Rgisterscr",Toast.LENGTH_SHORT).show();
     }
 
     public void onclick_register(View view) {
