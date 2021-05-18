@@ -12,7 +12,7 @@ import com.google.firebase.FirebaseApp;
 
 public class CounsellorRegisterActivity extends AppCompatActivity implements ICounsellorRegisterView {
 
-    EditText edPhone, edName, edEmail, edSID;
+    EditText edPhone, edName, edEmail, edSID, edUserName, edPassword;
     ICounsellorRegisterPresenter presenter;
 
     @Override
@@ -22,6 +22,8 @@ public class CounsellorRegisterActivity extends AppCompatActivity implements ICo
         presenter = new CounsellorRegisterPresenter(this);
         setContentView(R.layout.activity_register);
         edPhone=findViewById(R.id.edPhone);
+        edUserName=findViewById(R.id.edUserName);
+        edPassword=findViewById(R.id.edPassword);
         edName=findViewById(R.id.edName);
         edSID=findViewById(R.id.edSID);
         edEmail=findViewById(R.id.edEmail);
@@ -32,8 +34,10 @@ public class CounsellorRegisterActivity extends AppCompatActivity implements ICo
         String name=edName.getText().toString(),
                 email=edEmail.getText().toString(),
                 phone=edPhone.getText().toString(),
-                SID=edSID.getText().toString();
-        presenter.register(name,email,phone,SID);
+                SID=edSID.getText().toString(),
+                user_name=edUserName.getText().toString(),
+                password=edPassword.getText().toString();
+        presenter.register(user_name,name,password,email,phone,SID);
     }
 
     @Override
