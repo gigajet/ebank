@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+	<!-- nnhl colors -->
+
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorAccent">#D81B60</color>
+
+	<color name="_bg__startview_ek2_color">#FFFFFF</color>
+	<color name="fullbackground_color">#F8F9F0</color>
+	<color name="you_are_a_counsellor_color">#0094FF</color>
+	<color name="your_satisfaction_our_honor_color">#000000</color>
+	<color name="_____________color">#A0A6AB</color>
+	<color name="client__color">#A0A7AB</color>
+	<color name="rectangle_3_ek15_color">#B7F8B7</color>
+	<color name="rectangle_3_ek16_color">#FFE7B9</color>
+	<color name="rectangle_3_ek17_color">#F9FFB9</color>
 </resources>
