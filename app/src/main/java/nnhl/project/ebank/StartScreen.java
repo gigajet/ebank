@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
+import nnhl.project.ebank.hikikomori.transaction_test;
 
 
 public class StartScreen extends AppCompatActivity {
@@ -16,6 +17,11 @@ public class StartScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = new Intent(StartScreen.this, transaction_test.class);
+        startActivity(intent);
+        finish();
+
         setContentView(R.layout.activity_start_screen);
         counsellerBtn = (Button) findViewById(R.id.Counsellor);
         counsellerBtn.setOnClickListener(new View.OnClickListener() {

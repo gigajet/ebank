@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ebank">
-        <activity android:name=".Counsellor.Register.CounsellorRegisterActivity"></activity>
+        <activity android:name=".hikikomori.transaction_test"></activity>
+        <activity android:name=".Counsellor.Register.CounsellorRegisterActivity" />
         <activity android:name=".Counsellor.Login.CounsellorLoginActivity" />
         <activity android:name=".StartScreen">
             <intent-filter>
