@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Counsellor.CounsellorMainActivity"></activity>
+        <activity android:name=".hikikomori.twopass_write_test_counsellor"></activity>
+        <activity android:name=".hikikomori.twopass_write_test_client" />
+        <activity android:name=".Counsellor.CounsellorMainActivity" />
         <activity android:name=".Counsellor.Register.CounsellorRegisterActivity" />
         <activity android:name=".Counsellor.Login.CounsellorLoginActivity" />
         <activity android:name=".StartScreen">

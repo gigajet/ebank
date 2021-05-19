@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
+import nnhl.project.ebank.hikikomori.twopass_write_test_client;
+import nnhl.project.ebank.hikikomori.twopass_write_test_counsellor;
 
 
 public class StartScreen extends AppCompatActivity {
@@ -21,7 +23,8 @@ public class StartScreen extends AppCompatActivity {
         counsellerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartScreen.this, CounsellorLoginActivity.class);
+                //Intent intent = new Intent(StartScreen.this, CounsellorLoginActivity.class);
+                Intent intent = new Intent(StartScreen.this, twopass_write_test_counsellor.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +32,8 @@ public class StartScreen extends AppCompatActivity {
         clientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(StartScreen.this, twopass_write_test_client.class);
+                startActivity(intent);
             }
         });
     }
