@@ -7,11 +7,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/vector_ek3"
+        android:label="NNHL eSupport"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
         <activity android:name=".Counsellor.CounsellorMainActivity"></activity>
         <activity android:name=".Counsellor.Register.CounsellorRegisterActivity" />
         <activity android:name=".Counsellor.Login.CounsellorLoginActivity" />
