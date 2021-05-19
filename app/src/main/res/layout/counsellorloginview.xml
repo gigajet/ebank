@@ -1,0 +1,299 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<!--
+	/*
+	 *	This content is generated from the API File Info.
+	 *	(Alt+Shift+Ctrl+I).
+	 *
+	 *	@desc
+	 *	@file 		nnhl
+	 *	@date 		1621334150672
+	 *	@title 		Page 1
+	 *	@author
+	 *	@keywords
+	 *	@generator 	Export Kit v1.3.figma
+	 *
+	 */
+	-->
+	<RelativeLayout android:id="@+id/content_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+
+
+		<RelativeLayout android:id="@+id/page_counsellorloginview_ek1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			>
+
+			<View android:id="@+id/_bg__counsellorloginview_ek2"
+				android:background="@drawable/_bg__counsellorloginview_ek2_shape"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+
+			<View android:id="@+id/fullbackground_ek1"
+				android:background="@drawable/fullbackground_ek1_shape"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+
+
+			<RelativeLayout android:id="@+id/halfbackground_ek1"
+				android:layout_marginTop="0dp"
+				android:layout_marginStart="0dp"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				>
+
+				<ImageView android:id="@+id/rectangle_2_ek1"
+					android:src="@drawable/rectangle_2_ek1"
+					android:contentDescription="rectangle_2_ek1"
+					android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scaleType="fitStart"/>
+
+				<ImageView android:id="@+id/rectangle_1_ek1"
+					android:src="@drawable/rectangle_1_ek1"
+					android:contentDescription="rectangle_1_ek1"
+					android:layout_marginStart="0dp"
+					android:layout_marginTop="30dp"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scaleType="fitXY"/>
+
+			</RelativeLayout>
+
+
+			<RelativeLayout android:id="@+id/passwordinputtext"
+				android:layout_below="@id/usernameinputtext"
+				android:layout_marginTop="8dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				>
+
+				<TextView android:id="@+id/password_"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="@string/password__string"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					/>
+
+				<EditText android:id="@+id/passwordLoginEdittext"
+					android:background="@drawable/rectangle_3_ek2_shape"
+					android:layout_toRightOf="@+id/password_"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:hint="***********"
+					android:textAlignment="center"
+					android:gravity="center"/>
+
+			</RelativeLayout>
+
+
+			<RelativeLayout android:id="@+id/usernameinputtext"
+				android:layout_marginTop="275dp"
+				android:layout_marginStart="11dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				>
+
+				<TextView android:id="@+id/username_"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="@string/username__string"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					/>
+
+				<EditText android:id="@+id/usernameLoginEdittext"
+					android:background="@drawable/rectangle_3_ek3_shape"
+					android:layout_toRightOf="@+id/username_"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:hint="@string/nguyen_van_a_string"
+					android:textAlignment="center"
+					android:gravity="center" />
+
+			</RelativeLayout>
+
+
+			<RelativeLayout android:id="@+id/registerOption"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/loginOption"
+				android:layout_marginTop="10dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<ImageButton android:id="@+id/registerInLoginButton"
+					android:background="@drawable/shadow_button"
+					android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:layout_width="288dp"
+					android:layout_height="63dp" />
+
+				<TextView android:id="@+id/register"
+					android:textStyle="bold"
+					android:layout_gravity="center_horizontal|center"
+					android:gravity="center"
+					android:textSize="22sp"
+					android:textColor="@color/you_are_a_counsellor_color"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/register_string"
+					android:layout_centerHorizontal="true"
+					android:layout_centerVertical="true"
+					android:layout_centerInParent="true"
+					/>
+
+			</RelativeLayout>
+
+
+			<RelativeLayout android:id="@+id/backloginbutton"
+				android:layout_marginTop="20dp"
+				android:layout_below="@+id/registerOption"
+				android:layout_centerHorizontal="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<ImageButton
+					android:id="@+id/rectangle_3_ek5"
+					android:layout_width="100dp"
+					android:layout_height="39dp"
+					android:background="@drawable/shadow_button_2" />
+
+				<TextView android:id="@+id/back"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="4dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/back_string"
+					/>
+
+			</RelativeLayout>
+
+
+			<RelativeLayout android:id="@+id/loginOption"
+				android:layout_marginTop="425dp"
+				android:layout_centerHorizontal="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<ImageButton android:id="@+id/loginButton"
+					android:background="@drawable/shadow_button"
+					android:layout_width="288dp"
+					android:layout_height="63dp" />
+
+				<TextView android:id="@+id/login"
+					android:textStyle="bold"
+					android:layout_gravity="center_horizontal|center"
+					android:gravity="center"
+					android:textSize="22sp"
+					android:textColor="@color/you_are_a_counsellor_color"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/login_string"
+					android:layout_centerHorizontal="true"
+					android:layout_centerVertical="true"
+					android:layout_centerInParent="true"
+					/>
+
+			</RelativeLayout>
+
+
+			<RelativeLayout android:id="@+id/logo_ek1"
+				android:layout_marginTop="11dp"
+				android:layout_marginStart="11dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<TextView android:id="@+id/group_ek3"
+					android:textSize="19sp"
+					android:textColor="@color/your_satisfaction_our_honor_color"
+					android:layout_marginLeft="63dp"
+					android:layout_marginTop="34dp"
+					android:layout_width="82.43dp"
+					android:layout_height="45.67dp"
+					android:text="@string/group_ek3_string"
+					/>
+
+				<TextView android:id="@+id/nnhl_ek1"
+					android:textSize="26sp"
+					android:textColor="@color/your_satisfaction_our_honor_color"
+					android:layout_marginLeft="63dp"
+					android:layout_marginTop="8dp"
+					android:layout_width="86dp"
+					android:layout_height="50.17dp"
+					android:text="@string/nnhl_ek1_string"
+					/>
+
+
+				<RelativeLayout android:id="@+id/dove_1_ek1"
+					android:layout_marginTop="0dp"
+					android:layout_marginStart="0dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					>
+
+
+					<RelativeLayout android:id="@+id/group_ek4"
+						android:layout_marginTop="8.1dp"
+						android:layout_marginStart="0dp"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+
+						<ImageView android:id="@+id/vector_ek4"
+							android:src="@drawable/vector_ek4"
+							android:contentDescription="vector_ek4"
+							android:layout_marginStart="0dp"
+							android:layout_marginTop="0dp"
+							android:layout_width="59.13dp"
+							android:layout_height="51.8dp" />
+
+					</RelativeLayout>
+
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+			<TextView android:id="@+id/welcome_counsellor__"
+				android:textStyle="bold"
+				android:layout_gravity="center_horizontal|center"
+				android:gravity="center"
+				android:textSize="28sp"
+				android:textColor="@color/_bg__startview_ek2_color"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="200dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/welcome_counsellor___string"
+				/>
+
+		</RelativeLayout>
+
+
+	</RelativeLayout>
+
+</RelativeLayout>
