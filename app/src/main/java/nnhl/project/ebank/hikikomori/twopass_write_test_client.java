@@ -77,7 +77,9 @@ public class twopass_write_test_client extends AppCompatActivity {
                                             @Override
                                             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                                                 String enclosed_counsellor_id=snapshot.getValue(String.class);
-                                                String counsellor_id=enclosed_counsellor_id.substring(1,enclosed_counsellor_id.length()-2);
+                                                if (enclosed_counsellor_id==null || enclosed_counsellor_id.charAt(0)!='[') return;
+                                                Log.d(TAG,"enclosed_counsellor_id: "+enclosed_counsellor_id);
+                                                String counsellor_id=enclosed_counsellor_id.substring(1,enclosed_counsellor_id.length()-1);
                                                 tvResult.setText(counsellor_id);
                                                 //Delete the key
                                                 fb.getReference("waiting_clients").child(String.valueOf(id)).setValue(null);
