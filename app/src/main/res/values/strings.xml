@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- nnhl strings -->
+    <string name="app_name">ebank</string>
+    <string name="title_activity_counsellor_login">CounsellorLoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
-	<string name="app_name">Page 1</string>
 	<string name="ek_img_content">ExportKit Image</string>
 	<string name="you_are_a_counsellor_string">You are a counsellor</string>
 	<string name="you_are_a_client_string">You are a client</string>
