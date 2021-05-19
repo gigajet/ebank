@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.Set;
 
 import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Counsellor.CounsellorModel;
 
 public class CounsellorRegisterPresenter implements ICounsellorRegisterPresenter {
 
@@ -36,7 +37,7 @@ public class CounsellorRegisterPresenter implements ICounsellorRegisterPresenter
     }
 
     @Override
-    public void register(String username, String name, String password, String email, String phone, String SID) {
+    public void register(CounsellorModel counsellor, String SID) {
         //firebase operations
         firebase.getReference(Const.TBL_SID).child(SID).addValueEventListener(new ValueEventListener() {
             @Override
@@ -45,7 +46,7 @@ public class CounsellorRegisterPresenter implements ICounsellorRegisterPresenter
                     register_callback(-1, "SID not exists");
                 }
                 else {
-                    firebase.getReference(Const.TBL_counsellors).child(username).addValueEventListener(new ValueEventListener() {
+                    firebase.getReference(Const.TBL_counsellors).child(counsellor.getName()).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                             if (snapshot.exists() == true) {
@@ -55,11 +56,11 @@ public class CounsellorRegisterPresenter implements ICounsellorRegisterPresenter
                                 //Registered or not is not checked
                                 //New register account with username will replace old account
                                 Map<String, Object> map = new HashMap<>();
-                                map.put("name", name);
-                                map.put("email", email);
-                                map.put("password", password);
-                                map.put("phone",phone);
-                                firebase.getReference(Const.TBL_counsellors).child(username).updateChildren(map)
+                                map.put("name", counsellor.getName());
+                                map.put("email", counsellor.getEmail());
+                                map.put("password", counsellor.getPassword());
+                                map.put("phone",counsellor.getPhone());
+                                firebase.getReference(Const.TBL_counsellors).child(counsellor.getName()).updateChildren(map)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {

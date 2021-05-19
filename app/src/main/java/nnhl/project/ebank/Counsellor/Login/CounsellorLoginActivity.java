@@ -8,38 +8,39 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
+import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
 import nnhl.project.ebank.Counsellor.Register.CounsellorRegisterActivity;
 import nnhl.project.ebank.R;
 public class CounsellorLoginActivity extends AppCompatActivity implements CounsellorLoginPresenter.CounsellorLoginView{
     EditText accountEditText;
     EditText passwordEditText;
-    Button loginBtn;
-    Button registernBtn;
+    ImageButton loginBtn, registernBtn, backBtn;
     CounsellorLoginPresenter counsellorLoginPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_counsellor_login);
+        setContentView(R.layout.counsellorloginview);
         counsellorLoginPresenter =  new CounsellorLoginPresenter(this);
         init();
     }
 
     void init()
     {
-       accountEditText = findViewById(R.id.Account);
-       passwordEditText = findViewById(R.id.Password);
-       loginBtn = findViewById(R.id.LoginBtn);
-       registernBtn = findViewById(R.id.RegisterBtn);
-
+       accountEditText = findViewById(R.id.usernameLoginEdittext);
+       passwordEditText = findViewById(R.id.passwordLoginEdittext);
+       loginBtn = findViewById(R.id.loginButton);
+       registernBtn = findViewById(R.id.registerInLoginButton);
+       backBtn = findViewById(R.id.backButton);
        loginBtn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                String accountStr = String.valueOf(accountEditText.getText());
                String passwordStr = String.valueOf(passwordEditText.getText());
-               Toast.makeText(CounsellorLoginActivity.this,"Login clicked",Toast.LENGTH_SHORT).show();
-                counsellorLoginPresenter.CounsellorLogin(accountStr,passwordStr);
+               //Toast.makeText(CounsellorLoginActivity.this,"Login clicked",Toast.LENGTH_SHORT).show();
+               counsellorLoginPresenter.CounsellorLogin(accountStr,passwordStr);
            }
        });
        registernBtn.setOnClickListener(new View.OnClickListener() {
@@ -49,12 +50,19 @@ public class CounsellorLoginActivity extends AppCompatActivity implements Counse
                startActivity(intent);
            }
        });
+       backBtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               finish();
+           }
+       });
     }
 
     @Override
     public void ActionLoginSuccess() {
-        //Intent to other activity
         Toast.makeText(CounsellorLoginActivity.this,"Login successfully",Toast.LENGTH_LONG).show();
+        Intent intent=new Intent(CounsellorLoginActivity.this, CounsellorMainActivity.class);
+        startActivity(intent);
     }
 
     @Override

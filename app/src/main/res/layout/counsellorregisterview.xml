@@ -89,7 +89,7 @@
 					android:text="@string/security_id__string"
 					/>
 
-				<EditText android:id="@+id/rectangle_3_ek7"
+				<EditText android:id="@+id/securityIDEdittext"
 					android:background="@drawable/rectangle_3_ek7_shape"
 					android:layout_toRightOf="@+id/security_id_"
 					android:layout_width="280dp"
@@ -122,16 +122,17 @@
 					android:layout_centerVertical="true"
 					/>
 
-				<EditText android:id="@+id/emailEdittext"
-					android:background="@drawable/rectangle_3_ek8_shape"
-					android:layout_toRightOf="@+id/email_"
+				<EditText
+					android:id="@+id/emailEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:hint="employee@hhnl.com"
-					android:textAlignment="center"
-					android:textSize="19sp"
+					android:layout_toRightOf="@+id/email_"
+					android:background="@drawable/rectangle_3_ek8_shape"
 					android:gravity="center"
-					/>
+					android:hint="employee@hhnl.com"
+					android:inputType="textEmailAddress"
+					android:textAlignment="center"
+					android:textSize="19sp" />
 
 			</RelativeLayout>
 
@@ -155,16 +156,17 @@
 					android:text="@string/telephone__string"
 					/>
 
-				<EditText android:id="@+id/telephoneEdittext"
-					android:background="@drawable/rectangle_3_ek9_shape"
-					android:layout_toRightOf="@+id/telephone_"
+				<EditText
+					android:id="@+id/telephoneEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:hint="+84-999-999-999"
-					android:textAlignment="center"
-					android:textSize="19sp"
+					android:layout_toRightOf="@+id/telephone_"
+					android:background="@drawable/rectangle_3_ek9_shape"
 					android:gravity="center"
-					/>
+					android:hint="+84-999-999-999"
+					android:inputType="number"
+					android:textAlignment="center"
+					android:textSize="19sp" />
 
 			</RelativeLayout>
 
@@ -188,16 +190,17 @@
 					android:text="@string/password__ek1_string"
 					/>
 
-				<EditText android:id="@+id/passwordRegisterEdittext"
-					android:background="@drawable/rectangle_3_ek10_shape"
-					android:layout_toRightOf="@+id/password__ek1"
+				<EditText
+					android:id="@+id/passwordRegisterEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:hint="***********"
-					android:textAlignment="center"
-					android:textSize="19sp"
+					android:layout_toRightOf="@+id/password__ek1"
+					android:background="@drawable/rectangle_3_ek10_shape"
 					android:gravity="center"
-					/>
+					android:hint="***********"
+					android:inputType="textPassword"
+					android:textAlignment="center"
+					android:textSize="19sp" />
 
 			</RelativeLayout>
 
@@ -219,16 +222,17 @@
 					android:text="@string/username__ek1_string"
 					/>
 
-				<EditText android:id="@+id/usernameRegisterEdittext"
-					android:background="@drawable/rectangle_3_ek11_shape"
-					android:layout_toRightOf="@+id/username__ek1"
+				<EditText
+					android:id="@+id/usernameRegisterEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:hint="@string/nguyen_van_a_ek1_string"
-					android:textAlignment="center"
-					android:textSize="19sp"
+					android:layout_toRightOf="@+id/username__ek1"
+					android:background="@drawable/rectangle_3_ek11_shape"
 					android:gravity="center"
-					/>
+					android:hint="@string/nguyen_van_a_ek1_string"
+					android:inputType="text"
+					android:textAlignment="center"
+					android:textSize="19sp" />
 
 			</RelativeLayout>
 

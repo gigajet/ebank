@@ -1,6 +1,8 @@
 package nnhl.project.ebank.Counsellor.Register;
 
+import nnhl.project.ebank.Counsellor.CounsellorModel;
+
 public interface ICounsellorRegisterPresenter {
-    void register (String username, String name, String password, String email, String phone, String SID);
+    void register (CounsellorModel counsellor, String SID);
     void register_callback (int status, String msg);
 }

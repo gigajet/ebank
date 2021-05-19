@@ -43,7 +43,7 @@ public class CounsellorLoginPresenter {
                     CounsellorModel p = snapshot.getValue(CounsellorModel.class);
                     assert p != null;
                     if (p.getPassword().equals(password)) {
-                        Toast.makeText((Context) counsellorLoginView,password,Toast.LENGTH_SHORT).show();
+                        //Toast.makeText((Context) counsellorLoginView,password,Toast.LENGTH_SHORT).show();
                         counsellorLoginView.ActionLoginSuccess();
 
 //                            Intent intent = new Intent(activity, HomeActivity.class);

@@ -1,4 +1,5 @@
 package nnhl.project.ebank.Counsellor.Register;
+import nnhl.project.ebank.Counsellor.CounsellorModel;
 import nnhl.project.ebank.Counsellor.Register.CounsellorRegisterPresenter;
 import nnhl.project.ebank.R;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApiNotAvailableException;
@@ -13,7 +15,8 @@ import com.google.firebase.FirebaseApp;
 
 public class CounsellorRegisterActivity extends AppCompatActivity implements ICounsellorRegisterView {
 
-    EditText edPhone, edName, edEmail, edSID, edUserName, edPassword;
+    EditText edPhone, edEmail, edSID, edUserName, edPassword;
+    ImageButton btnRegister;
     ICounsellorRegisterPresenter presenter;
 
     @Override
@@ -21,25 +24,27 @@ public class CounsellorRegisterActivity extends AppCompatActivity implements ICo
         super.onCreate(savedInstanceState);
         //FirebaseApp.initializeApp(getApplicationContext());
         presenter = new CounsellorRegisterPresenter(this);
-        setContentView(R.layout.activity_counsellor_register);
+        setContentView(R.layout.counsellorregisterview);
 
-        edPhone=findViewById(R.id.edPhone);
-        edUserName=findViewById(R.id.edUserName);
-        edPassword=findViewById(R.id.edPassword);
-        edName=findViewById(R.id.edName);
-        edSID=findViewById(R.id.edSID);
-        edEmail=findViewById(R.id.edEmail);
-        Toast.makeText(this,"Rgisterscr",Toast.LENGTH_SHORT).show();
+        initComponents();
     }
 
-    public void onclick_register(View view) {
-        String name=edName.getText().toString(),
-                email=edEmail.getText().toString(),
-                phone=edPhone.getText().toString(),
-                SID=edSID.getText().toString(),
-                user_name=edUserName.getText().toString(),
-                password=edPassword.getText().toString();
-        presenter.register(user_name,name,password,email,phone,SID);
+    private void initComponents() {
+        edPhone=findViewById(R.id.telephoneEdittext);
+        edUserName=findViewById(R.id.usernameRegisterEdittext);
+        edPassword=findViewById(R.id.passwordRegisterEdittext);
+        edSID=findViewById(R.id.securityIDEdittext);
+        edEmail=findViewById(R.id.emailEdittext);
+        btnRegister=findViewById(R.id.registerButton);
+        btnRegister.setOnClickListener(v -> {
+            String email=edEmail.getText().toString(),
+                    phone=edPhone.getText().toString(),
+                    SID=edSID.getText().toString(),
+                    user_name=edUserName.getText().toString(),
+                    password=edPassword.getText().toString();
+            CounsellorModel counsellorModel = new CounsellorModel(email,user_name,password,phone);
+            presenter.register(counsellorModel, SID);
+        });
     }
 
     @Override

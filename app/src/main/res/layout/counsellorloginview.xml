@@ -89,14 +89,16 @@
 					android:layout_centerVertical="true"
 					/>
 
-				<EditText android:id="@+id/passwordLoginEdittext"
-					android:background="@drawable/rectangle_3_ek2_shape"
-					android:layout_toRightOf="@+id/password_"
+				<EditText
+					android:id="@+id/passwordLoginEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
+					android:layout_toRightOf="@+id/password_"
+					android:background="@drawable/rectangle_3_ek2_shape"
+					android:gravity="center"
 					android:hint="***********"
-					android:textAlignment="center"
-					android:gravity="center"/>
+					android:inputType="textPassword"
+					android:textAlignment="center" />
 
 			</RelativeLayout>
 
@@ -120,14 +122,16 @@
 					android:layout_centerVertical="true"
 					/>
 
-				<EditText android:id="@+id/usernameLoginEdittext"
-					android:background="@drawable/rectangle_3_ek3_shape"
-					android:layout_toRightOf="@+id/username_"
+				<EditText
+					android:id="@+id/usernameLoginEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
+					android:layout_toRightOf="@+id/username_"
+					android:background="@drawable/rectangle_3_ek3_shape"
+					android:gravity="center"
 					android:hint="@string/nguyen_van_a_string"
-					android:textAlignment="center"
-					android:gravity="center" />
+					android:inputType="text"
+					android:textAlignment="center" />
 
 			</RelativeLayout>
 
@@ -173,7 +177,7 @@
 				>
 
 				<ImageButton
-					android:id="@+id/rectangle_3_ek5"
+					android:id="@+id/backButton"
 					android:layout_width="100dp"
 					android:layout_height="39dp"
 					android:background="@drawable/shadow_button_2" />
