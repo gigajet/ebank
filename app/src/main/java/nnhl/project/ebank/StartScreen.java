@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
+import nnhl.project.ebank.hikikomori.fbmsg_test;
 import nnhl.project.ebank.hikikomori.transaction_test;
 
 
@@ -18,7 +19,7 @@ public class StartScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(StartScreen.this, transaction_test.class);
+        Intent intent = new Intent(StartScreen.this, fbmsg_test.class);
         startActivity(intent);
         finish();
 
