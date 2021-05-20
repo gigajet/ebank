@@ -44,6 +44,15 @@ public class twoqueue_client extends AppCompatActivity {
     String TAG="TWOQUEUE-CLIENT";
     String other_handle;
 
+    public void result() {
+        twoqueue_client.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                tvResult.setText(other_handle);
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,18 +78,20 @@ public class twoqueue_client extends AppCompatActivity {
                         if (nrootchild == 0) { //first time so null (we have data_leg so child never be 0)
                             //try to write dummy value, server will reject
                             //and run this again
-                            currentData.child("bin_aqsa").setValue("wawahmu");
+                            //currentData.child("bin_aqsa").setValue("wawahmu");
+                            return Transaction.success(currentData);
                         }
                         else {
                             for (MutableData data : currentData.child("waiting_counsellors").getChildren()) {
                                 String tmp=data.getValue(String.class);
                                 if (tmp.charAt(0)=='[') continue;
                                 other_handle=tmp;
-                                tvResult.setText(other_handle);
+                                result();
                                 data.setValue("["+String.valueOf(myhandle)+"]");
                                 return Transaction.success(currentData);
                             }
 
+                            Log.d(TAG,"No waiting counsellor");
                             //no waiting client to be paired
                             long handle=currentData.child("next_handle").getValue(Long.class);
                             currentData.child("next_handle").setValue(handle+1);
@@ -96,7 +107,7 @@ public class twoqueue_client extends AppCompatActivity {
                                     String enclosed=snapshot.getValue(String.class);
                                     if (enclosed==null || enclosed.charAt(0)!='[') return;
                                     other_handle=enclosed.substring(1,enclosed.length()-1);
-                                    tvResult.setText(other_handle);
+                                    result();
                                     ref.removeValue();
                                     ref.removeEventListener(this);
                                 }
@@ -108,7 +119,6 @@ public class twoqueue_client extends AppCompatActivity {
                             });
                             return Transaction.success(currentData);
                         }
-                        return Transaction.success(currentData);
                     }
 
                     @Override
