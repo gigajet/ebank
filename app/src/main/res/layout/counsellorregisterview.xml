@@ -70,106 +70,36 @@
 			</RelativeLayout>
 
 
-			<RelativeLayout android:id="@+id/sidinputtext"
-				android:layout_below="@+id/emailinputtext"
+			<RelativeLayout android:id="@+id/usernameinputtext_ek1"
+				android:layout_marginTop="250dp"
 				android:layout_centerHorizontal="true"
-				android:layout_marginTop="5dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				>
-
-				<TextView android:id="@+id/security_id_"
-					android:textStyle="bold"
+				<TextView android:id="@+id/username__ek1"
 					android:gravity="center"
 					android:layout_centerVertical="true"
-					android:textSize="19sp"
-					android:textColor="@color/fullbackground_color"
-					android:layout_width="100dp"
-					android:layout_height="40dp"
-					android:text="@string/security_id__string"
-					/>
-
-				<EditText android:id="@+id/securityIDEdittext"
-					android:background="@drawable/rectangle_3_ek7_shape"
-					android:layout_toRightOf="@+id/security_id_"
-					android:layout_width="280dp"
-					android:layout_height="40dp"
-					android:hint="xxx-xxx-xxx"
-					android:textAlignment="center"
-					android:textSize="19sp"
-					android:gravity="center"
-					/>
-
-			</RelativeLayout>
-
-
-			<RelativeLayout android:id="@+id/emailinputtext"
-				android:layout_below="@+id/telephoneinputtext"
-				android:layout_centerHorizontal="true"
-				android:layout_marginTop="5dp"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				>
-
-				<TextView android:id="@+id/email_"
 					android:textStyle="bold"
 					android:textSize="19sp"
 					android:textColor="@color/fullbackground_color"
 					android:layout_width="100dp"
 					android:layout_height="40dp"
-					android:text="@string/email__string"
-					android:gravity="center"
-					android:layout_centerVertical="true"
+					android:text="@string/username__ek1_string"
 					/>
 
 				<EditText
-					android:id="@+id/emailEdittext"
+					android:id="@+id/usernameRegisterEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:layout_toRightOf="@+id/email_"
-					android:background="@drawable/rectangle_3_ek8_shape"
+					android:layout_toRightOf="@+id/username__ek1"
+					android:background="@drawable/rectangle_3_ek11_shape"
 					android:gravity="center"
-					android:hint="employee@hhnl.com"
-					android:inputType="textEmailAddress"
+					android:hint="@string/nguyen_van_a_ek1_string"
+					android:inputType="text"
 					android:textAlignment="center"
 					android:textSize="19sp" />
 
 			</RelativeLayout>
-
-
-			<RelativeLayout android:id="@+id/telephoneinputtext"
-				android:layout_below="@+id/passwordinputtext_ek1"
-				android:layout_centerHorizontal="true"
-				android:layout_marginTop="5dp"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				>
-
-				<TextView android:id="@+id/telephone_"
-					android:gravity="center"
-					android:layout_centerVertical="true"
-					android:textStyle="bold"
-					android:textSize="19sp"
-					android:textColor="@color/fullbackground_color"
-					android:layout_width="100dp"
-					android:layout_height="40dp"
-					android:text="@string/telephone__string"
-					/>
-
-				<EditText
-					android:id="@+id/telephoneEdittext"
-					android:layout_width="280dp"
-					android:layout_height="40dp"
-					android:layout_toRightOf="@+id/telephone_"
-					android:background="@drawable/rectangle_3_ek9_shape"
-					android:gravity="center"
-					android:hint="+84-999-999-999"
-					android:inputType="number"
-					android:textAlignment="center"
-					android:textSize="19sp" />
-
-			</RelativeLayout>
-
 
 			<RelativeLayout android:id="@+id/passwordinputtext_ek1"
 				android:layout_below="@+id/usernameinputtext_ek1"
@@ -204,14 +134,15 @@
 
 			</RelativeLayout>
 
-
-			<RelativeLayout android:id="@+id/usernameinputtext_ek1"
-				android:layout_marginTop="250dp"
+			<RelativeLayout android:id="@+id/telephoneinputtext"
+				android:layout_below="@+id/passwordinputtext_ek1"
 				android:layout_centerHorizontal="true"
+				android:layout_marginTop="5dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				>
-				<TextView android:id="@+id/username__ek1"
+
+				<TextView android:id="@+id/telephone_"
 					android:gravity="center"
 					android:layout_centerVertical="true"
 					android:textStyle="bold"
@@ -219,23 +150,87 @@
 					android:textColor="@color/fullbackground_color"
 					android:layout_width="100dp"
 					android:layout_height="40dp"
-					android:text="@string/username__ek1_string"
+					android:text="@string/telephone__string"
 					/>
 
 				<EditText
-					android:id="@+id/usernameRegisterEdittext"
+					android:id="@+id/telephoneEdittext"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:layout_toRightOf="@+id/username__ek1"
-					android:background="@drawable/rectangle_3_ek11_shape"
+					android:layout_toRightOf="@+id/telephone_"
+					android:background="@drawable/rectangle_3_ek9_shape"
 					android:gravity="center"
-					android:hint="@string/nguyen_van_a_ek1_string"
-					android:inputType="text"
+					android:hint="+84-999-999-999"
+					android:inputType="number"
 					android:textAlignment="center"
 					android:textSize="19sp" />
 
 			</RelativeLayout>
 
+			<RelativeLayout android:id="@+id/emailinputtext"
+				android:layout_below="@+id/telephoneinputtext"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="5dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<TextView android:id="@+id/email_"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="@string/email__string"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					/>
+
+				<EditText
+					android:id="@+id/emailEdittext"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:layout_toRightOf="@+id/email_"
+					android:background="@drawable/rectangle_3_ek8_shape"
+					android:gravity="center"
+					android:hint="employee@hhnl.com"
+					android:inputType="textEmailAddress"
+					android:textAlignment="center"
+					android:textSize="19sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout android:id="@+id/sidinputtext"
+				android:layout_below="@+id/emailinputtext"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="5dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<TextView android:id="@+id/security_id_"
+					android:textStyle="bold"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="@string/security_id__string"
+					/>
+
+				<EditText android:id="@+id/securityIDEdittext"
+					android:background="@drawable/rectangle_3_ek7_shape"
+					android:layout_toRightOf="@+id/security_id_"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:hint="xxx-xxx-xxx"
+					android:textAlignment="center"
+					android:textSize="19sp"
+					android:gravity="center"
+					/>
+
+			</RelativeLayout>
 
 			<RelativeLayout android:id="@+id/registerPage"
 				android:layout_marginTop="540dp"
@@ -263,7 +258,6 @@
 					/>
 
 			</RelativeLayout>
-
 
 			<RelativeLayout android:id="@+id/logo_ek2"
 				android:layout_marginTop="11dp"

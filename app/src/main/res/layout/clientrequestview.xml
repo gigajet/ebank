@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		nnhl
+     *	@date 		1621334150672
+     *	@title 		Page 1
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <RelativeLayout android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:id="@+id/page_counsellormainview_ek1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View android:id="@+id/_bg__counsellormainview_ek2"
+                android:background="@drawable/_bg__counsellormainview_ek2_shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View android:id="@+id/fullbackground_ek3"
+                android:background="@drawable/buildingbackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout android:id="@+id/logo_ek3"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/group_ek8"
+
+                    android:textSize="19sp"
+                    android:textColor="@color/fullbackground_color"
+                    android:layout_marginLeft="63dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_width="82.43dp"
+                    android:layout_height="45.67dp"
+                    android:text="@string/group_ek8_string"
+                    />
+
+                <TextView android:id="@+id/nnhl_ek3"
+
+                    android:textSize="26sp"
+                    android:textColor="@color/fullbackground_color"
+                    android:layout_marginLeft="63dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="86dp"
+                    android:layout_height="50.17dp"
+                    android:text="@string/nnhl_ek3_string"
+                    />
+
+
+                <RelativeLayout android:id="@+id/dove_1_ek3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <RelativeLayout android:id="@+id/group_ek9"
+                        android:layout_marginTop="8.1dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <ImageView android:id="@+id/vector_ek9"
+                            android:src="@drawable/vector_ek9"
+                            android:contentDescription="vector_ek9"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_width="59.13dp"
+                            android:layout_height="51.8dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/clientnametext"
+                android:layout_marginTop="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText android:id="@+id/clientNameEdittext"
+                    android:background="@drawable/rectangle_3_ek13_shape"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/_____________color"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:text="Client's name"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/clientnametext_ek1"
+                android:layout_below="@+id/clientnametext"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText android:id="@+id/requestContentEdittext"
+                    android:background="@drawable/rectangle_3_ek13_shape"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/_____________color"
+                    android:layout_width="280dp"
+                    android:layout_height="265dp"
+                    android:text="@string/request_content_string"
+                    android:padding="8dp"
+                    android:gravity="start"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/halfbackground_ek3"
+                android:layout_marginTop="354dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView android:id="@+id/rectangle_1_ek3"
+                    android:src="@drawable/rectangle_1_ek3"
+                    android:contentDescription="rectangle_1_ek3"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView android:id="@+id/rectangle_2_ek3"
+                    android:src="@drawable/rectangle_2_ek3"
+                    android:contentDescription="rectangle_2_ek3"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/logoutOption"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/logo_ek3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/requestTitle"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/rectangle_3_ek15_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Advisory request Form"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/startOption"
+                android:layout_marginTop="560dp"
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageButton android:id="@+id/requestSendButton"
+                    android:background="@drawable/shadow_button_5"
+                    android:layout_width="288dp"
+                    android:layout_height="63dp" />
+
+                <TextView android:id="@+id/requestText"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/you_are_a_counsellor_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:text="Request"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
