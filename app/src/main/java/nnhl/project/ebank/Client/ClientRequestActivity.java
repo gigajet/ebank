@@ -2,11 +2,14 @@ package nnhl.project.ebank.Client;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
+import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
 import nnhl.project.ebank.R;
 public class ClientRequestActivity extends AppCompatActivity implements ClientRequestPresenter.View {
     EditText edClientName,edReqContent;
@@ -44,5 +47,8 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     @Override
     public void fetch_callback(String videocall_token) {
         Log.d(TAG,"Jitsi token: "+videocall_token);
+        Intent intent=new Intent(ClientRequestActivity.this, VideoCallActivity.class);
+        intent.putExtra("jitsi_room", videocall_token);
+        startActivity(intent);
     }
 }

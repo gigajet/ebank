@@ -35,6 +35,9 @@ public class CounsellorMainPresenter {
     }
 
     boolean is_ready_to_call() {return ready_to_call;}
+    String get_videocall_token() {
+        return jitsi_room;
+    }
 
     void start () {
         client_name=null; req_content=null;
@@ -103,6 +106,7 @@ public class CounsellorMainPresenter {
                                 return;
                                 //e.printStackTrace();
                             }
+                            ready_to_call=true;
                             view.update_client_info(client_name, req_content);
                             Log.d(TAG+"X","Jitsi token: "+jitsi_room);
 
