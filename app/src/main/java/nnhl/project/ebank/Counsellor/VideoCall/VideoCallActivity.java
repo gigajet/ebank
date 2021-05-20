@@ -8,9 +8,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import org.jitsi.meet.sdk.BroadcastEvent;
+import org.jitsi.meet.sdk.BroadcastIntentHelper;
 import org.jitsi.meet.sdk.JitsiMeet;
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
@@ -21,7 +24,7 @@ import java.net.URL;
 import nnhl.project.ebank.R;
 
 public class VideoCallActivity extends AppCompatActivity {
-
+    String TAG="VIDEOCALL-ACTIVITY";
     private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -100,10 +103,10 @@ public class VideoCallActivity extends AppCompatActivity {
 
             switch (event.getType()) {
                 case CONFERENCE_JOINED:
-                    Timber.i("Conference Joined with url%s", event.getData().get("url"));
+                    Log.i(TAG,"Conference Joined with url%s"+ event.getData().get("url"));
                     break;
                 case PARTICIPANT_JOINED:
-                    Timber.i("Participant joined%s", event.getData().get("name"));
+                    Log.i(TAG,"Participant joined%s" + event.getData().get("name"));
                     break;
             }
         }

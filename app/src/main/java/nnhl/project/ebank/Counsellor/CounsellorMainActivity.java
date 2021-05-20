@@ -1,7 +1,9 @@
 package nnhl.project.ebank.Counsellor;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
 import nnhl.project.ebank.R;
 
 public class CounsellorMainActivity extends AppCompatActivity implements CounsellorMainPresenter.View {
@@ -43,7 +46,11 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
                             Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    //Call
+                    //Call code
+                    String jitsi_room=presenter.get_videocall_token();
+                    Intent intent=new Intent(CounsellorMainActivity.this, VideoCallActivity.class);
+                    intent.putExtra("jitsi_room", presenter.get_videocall_token());
+                    startActivity(intent);
                 }
             }
         });
@@ -58,6 +65,13 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
                 presenter.start();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        tvRequestContent.setText("");
+        tvClientName.setText("");
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

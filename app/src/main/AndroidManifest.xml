@@ -5,10 +5,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--android:label="@string/app_label" //some conflict with jitsi-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/vector_ek3"
-        android:label="NNHL eSupport"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Counsellor.VideoCall.VideoCallActivity"></activity>
