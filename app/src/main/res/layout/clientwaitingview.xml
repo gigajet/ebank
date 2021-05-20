@@ -217,6 +217,7 @@
                 >
 
                 <ImageButton android:id="@+id/endRequestButton"
+                    android:onClick="onclick_endrequest"
                     android:background="@drawable/shadow_button_3"
                     android:layout_width="288dp"
                     android:layout_height="63dp" />
