@@ -143,7 +143,9 @@
 				android:layout_height="wrap_content"
 				>
 
-				<ImageButton android:id="@+id/registerInLoginButton"
+				<ImageButton
+					android:foreground="?android:attr/selectableItemBackground"
+					android:id="@+id/registerInLoginButton"
 					android:background="@drawable/shadow_button"
 					android:layout_marginStart="0dp"
 					android:layout_marginTop="0dp"
@@ -176,6 +178,7 @@
 				>
 
 				<ImageButton
+					android:foreground="?android:attr/selectableItemBackground"
 					android:id="@+id/backButton"
 					android:layout_width="100dp"
 					android:layout_height="39dp"
@@ -202,7 +205,9 @@
 				android:layout_height="wrap_content"
 				>
 
-				<ImageButton android:id="@+id/loginButton"
+				<ImageButton
+					android:foreground="?android:attr/selectableItemBackground"
+					android:id="@+id/loginButton"
 					android:background="@drawable/shadow_button"
 					android:layout_width="288dp"
 					android:layout_height="63dp" />
