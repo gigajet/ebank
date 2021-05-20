@@ -11,8 +11,9 @@
         android:label="NNHL eSupport"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
-        <activity android:name=".Counsellor.CounsellorMainActivity"></activity>
+        <activity android:name=".Client.ClientRequestActivity"></activity>
+        <activity android:name=".Client.ClientMainActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".Counsellor.CounsellorMainActivity" />
         <activity android:name=".Counsellor.Register.CounsellorRegisterActivity" />
         <activity android:name=".Counsellor.Login.CounsellorLoginActivity" />
         <activity android:name=".StartScreen">

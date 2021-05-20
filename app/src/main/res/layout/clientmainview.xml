@@ -178,6 +178,7 @@
                 <ImageButton android:id="@+id/requestButton"
                     android:background="@drawable/shadow_button_5"
                     android:layout_width="288dp"
+                    android:onClick="onclick_request"
                     android:layout_height="63dp" />
 
                 <TextView android:id="@+id/supportText"
@@ -206,6 +207,7 @@
                     android:id="@+id/backButton"
                     android:layout_width="100dp"
                     android:layout_height="39dp"
+                    android:onClick="onclick_back"
                     android:background="@drawable/shadow_button_2" />
 
                 <TextView android:id="@+id/back"

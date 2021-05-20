@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import nnhl.project.ebank.Client.ClientMainActivity;
 import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
 
 
@@ -29,7 +30,8 @@ public class StartScreen extends AppCompatActivity {
         clientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(StartScreen.this, ClientMainActivity.class);
+                startActivity(intent);
             }
         });
     }

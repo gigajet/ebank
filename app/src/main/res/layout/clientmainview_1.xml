@@ -154,6 +154,7 @@
 
                 <ImageButton android:id="@+id/requestButton"
                     android:background="@drawable/shadow_button_5"
+                    android:onClick="onclick_request"
                     android:layout_width="288dp"
                     android:layout_height="63dp" />
 
@@ -181,6 +182,7 @@
 
                 <ImageButton
                     android:id="@+id/backButton"
+                    android:onClick="onclick_back"
                     android:layout_width="100dp"
                     android:layout_height="39dp"
                     android:background="@drawable/shadow_button_2" />

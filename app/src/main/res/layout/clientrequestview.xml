@@ -102,16 +102,17 @@
                 android:layout_height="wrap_content"
                 >
 
-                <EditText android:id="@+id/clientNameEdittext"
-                    android:background="@drawable/rectangle_3_ek13_shape"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/_____________color"
+                <EditText
+                    android:id="@+id/clientNameEdittext"
                     android:layout_width="280dp"
                     android:layout_height="40dp"
-                    android:text="Client's name"
+                    android:background="@drawable/rectangle_3_ek13_shape"
                     android:gravity="center"
-                    />
+                    android:hint="Client's name"
+                    android:inputType="text"
+                    android:textColor="@color/_____________color"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -124,17 +125,17 @@
                 android:layout_height="wrap_content"
                 >
 
-                <EditText android:id="@+id/requestContentEdittext"
-                    android:background="@drawable/rectangle_3_ek13_shape"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/_____________color"
+                <EditText
+                    android:id="@+id/requestContentEdittext"
                     android:layout_width="280dp"
                     android:layout_height="265dp"
-                    android:text="@string/request_content_string"
-                    android:padding="8dp"
+                    android:background="@drawable/rectangle_3_ek13_shape"
                     android:gravity="start"
-                    />
+                    android:hint="@string/request_content_string"
+                    android:padding="8dp"
+                    android:textColor="@color/_____________color"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
