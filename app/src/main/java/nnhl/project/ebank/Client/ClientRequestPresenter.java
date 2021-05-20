@@ -26,6 +26,7 @@ public class ClientRequestPresenter {
     String TAG="CLIENT-REQUEST";
     String jitsi_room;
     DatabaseReference listen_ref;
+    boolean really_complete;
     public ClientRequestPresenter(View view) {
         this.view = view;
         fb=FirebaseDatabase.getInstance(Const.DB_URL);
@@ -34,6 +35,7 @@ public class ClientRequestPresenter {
     }
 
     void request (String client_name, String req_content) {
+        really_complete=false;
         JSONObject data=new JSONObject();
         jitsi_room= Util.RandomJitsiRoomName();
         try {
@@ -73,6 +75,7 @@ public class ClientRequestPresenter {
                             e.printStackTrace();
                             continue;
                         }
+                        really_complete=true;
                         return Transaction.success(currentData);
                     }
 
@@ -92,18 +95,14 @@ public class ClientRequestPresenter {
                             if (tmp==null) return;
                             try {
                                 JSONObject tmp_json=new JSONObject(tmp);
-                                if (tmp_json.getString("last_write").equals("client"))
-                                {
-                                    Log.d(TAG, "yes it is");
-                                    return;
-                                }
-                                Log.d(TAG,"last_write: "+tmp_json.getString("last_write"));
-                                Log.d(TAG, "last_write_len: "+String.valueOf(tmp_json.getString("last_write").length()));
+                                if (tmp_json.getString("last_write").equals("client")) return;
                                 //Add code here if you wanna read things sent from counsellor
                             } catch (JSONException e) {
                                 return;
                                 //e.printStackTrace();
                             }
+                            //Complete callback
+                            view.fetch_callback(jitsi_room);
 
                             listen_ref.removeValue();
                             listen_ref.removeEventListener(this);
@@ -124,13 +123,16 @@ public class ClientRequestPresenter {
                 if (!committed)
                     Log.e(TAG, "onComplete: "+error);
                 else {
-                    //Complete callback
+                    if (really_complete) {
+                        //Complete callback
+                        view.fetch_callback(jitsi_room);
+                    }
                 }
             }
         }, false);
     }
 
     public interface View {
-
+        void fetch_callback (String videocall_token);
     };
 }

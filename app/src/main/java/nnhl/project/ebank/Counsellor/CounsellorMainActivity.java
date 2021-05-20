@@ -47,15 +47,17 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
                 }
             }
         });
+        tvRequestContent=findViewById(R.id.requestContentTextview);
+        tvClientName=findViewById(R.id.clientNameTextview);
         btnStart=findViewById(R.id.startButton);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tvClientName.setText("Getting info...");
+                tvRequestContent.setText("Getting info...");
                 presenter.start();
             }
         });
-        tvRequestContent=findViewById(R.id.requestContentTextview);
-        tvClientName=findViewById(R.id.clientNameTextview);
     }
 
     @Override

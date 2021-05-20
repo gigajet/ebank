@@ -37,6 +37,7 @@ public class CounsellorMainPresenter {
     boolean is_ready_to_call() {return ready_to_call;}
 
     void start () {
+        client_name=null; req_content=null;
         JSONObject data=new JSONObject();
         jitsi_room= Util.RandomJitsiRoomName();
         try {
@@ -102,6 +103,8 @@ public class CounsellorMainPresenter {
                                 return;
                                 //e.printStackTrace();
                             }
+                            view.update_client_info(client_name, req_content);
+                            Log.d(TAG+"X","Jitsi token: "+jitsi_room);
 
                             listen_ref.removeValue();
                             listen_ref.removeEventListener(this);
@@ -123,15 +126,17 @@ public class CounsellorMainPresenter {
                     Log.e(TAG, "onComplete: "+error);
                 else {
                     //Complete callback
-                    ready_to_call=true;
-                    view.update_client_info(client_name, req_content);
+                    if (client_name != null) {
+                        ready_to_call=true;
+                        view.update_client_info(client_name, req_content);
+                        Log.d(TAG,"Jitsi token: "+jitsi_room);
+                    }
                 }
             }
         }, false);
     }
 
     public interface View {
-
         void update_client_info(String client_name, String req_content);
     }
 }

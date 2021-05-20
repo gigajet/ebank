@@ -3,6 +3,7 @@ package nnhl.project.ebank.Client;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -10,6 +11,7 @@ import nnhl.project.ebank.R;
 public class ClientRequestActivity extends AppCompatActivity implements ClientRequestPresenter.View {
     EditText edClientName,edReqContent;
     ClientRequestPresenter presenter;
+    String TAG="CLIENT-REQUEST";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,5 +39,10 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
 
         setContentView(R.layout.clientrequestview);
         initRequestComponents();
+    }
+
+    @Override
+    public void fetch_callback(String videocall_token) {
+        Log.d(TAG,"Jitsi token: "+videocall_token);
     }
 }
