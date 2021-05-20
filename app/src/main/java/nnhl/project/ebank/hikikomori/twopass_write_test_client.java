@@ -49,7 +49,7 @@ import nnhl.project.ebank.R;
 public class twopass_write_test_client extends AppCompatActivity {
 
     FirebaseDatabase fb;
-    TextView tvResult;
+    TextView tvResult, tvToBeTransmit;
     Button btnGet;
     String TAG="TWOPASS-CLIENT";
 
@@ -59,6 +59,7 @@ public class twopass_write_test_client extends AppCompatActivity {
         setContentView(R.layout.hikikomori_twopass_write_test);
         fb=FirebaseDatabase.getInstance();
         tvResult=findViewById(R.id.tvResult);
+        tvToBeTransmit=findViewById(R.id.tvToBeTransmit);
         btnGet=findViewById(R.id.btnGet);
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +67,7 @@ public class twopass_write_test_client extends AppCompatActivity {
                 tvResult.setText("Please wait...");
                 int id=new Random().nextInt();
                 long handle = new Random().nextLong();
+                tvToBeTransmit.setText(String.valueOf(handle));
                 DatabaseReference ref=fb.getReference("waiting_clients");
                 fb.getReference("waiting_clients").child(String.valueOf(id))
                         .setValue(String.valueOf(handle))

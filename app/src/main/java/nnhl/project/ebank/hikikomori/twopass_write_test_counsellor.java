@@ -24,7 +24,7 @@ import java.util.Random;
 
 public class twopass_write_test_counsellor extends AppCompatActivity {
     FirebaseDatabase fb;
-    TextView tvResult;
+    TextView tvResult, tvToBeTransmit;
     Button btnGet;
     String TAG="TWOPASS-COUNSELLOR";
     String client_handle;
@@ -35,11 +35,13 @@ public class twopass_write_test_counsellor extends AppCompatActivity {
         setContentView(R.layout.hikikomori_twopass_write_test);
         fb= FirebaseDatabase.getInstance();
         tvResult=findViewById(R.id.tvResult);
+        tvToBeTransmit=findViewById(R.id.tvToBeTransmit);
         btnGet=findViewById(R.id.btnGet);
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 long counsellor_id=new Random().nextLong();
+                tvToBeTransmit.setText(String.valueOf(counsellor_id));
                 fb.getReference().child("waiting_clients").runTransaction(new Transaction.Handler() {
                     @NonNull
                     @NotNull
