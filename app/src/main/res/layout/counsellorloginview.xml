@@ -167,7 +167,7 @@
 			</RelativeLayout>
 
 
-			<RelativeLayout android:id="@+id/backloginbutton"
+			<RelativeLayout android:id="@+id/backloginButton"
 				android:layout_marginTop="20dp"
 				android:layout_below="@+id/registerOption"
 				android:layout_centerHorizontal="true"

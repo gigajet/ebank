@@ -77,7 +77,6 @@
                         android:layout_marginStart="0dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         >
 
                         <ImageView android:id="@+id/vector_ek9"
@@ -91,50 +90,6 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
-
-            </RelativeLayout>
-
-
-            <RelativeLayout android:id="@+id/clientnametext"
-                android:layout_marginTop="160dp"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <EditText android:id="@+id/clientNameEdittext"
-                    android:background="@drawable/rectangle_3_ek13_shape"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/_____________color"
-                    android:layout_width="280dp"
-                    android:layout_height="40dp"
-                    android:text="Client's name"
-                    android:gravity="center"
-                    />
-
-            </RelativeLayout>
-
-
-            <RelativeLayout android:id="@+id/clientnametext_ek1"
-                android:layout_below="@+id/clientnametext"
-                android:layout_marginTop="8dp"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <EditText android:id="@+id/requestContentEdittext"
-                    android:background="@drawable/rectangle_3_ek13_shape"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/_____________color"
-                    android:layout_width="280dp"
-                    android:layout_height="265dp"
-                    android:text="@string/request_content_string"
-                    android:padding="8dp"
-                    android:gravity="start"
-                    />
 
             </RelativeLayout>
 
@@ -166,34 +121,6 @@
 
             </RelativeLayout>
 
-            <RelativeLayout android:id="@+id/backloginButton"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/startOption"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <ImageButton
-                    android:id="@+id/backRequestButton"
-                    android:layout_width="100dp"
-                    android:layout_height="39dp"
-                    android:background="@drawable/shadow_button_2" />
-
-                <TextView android:id="@+id/back"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/fullbackground_color"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/back_string"
-                    />
-
-            </RelativeLayout>
-
-
             <RelativeLayout android:id="@+id/logoutOption"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/logo_ek3"
@@ -201,15 +128,15 @@
                 android:layout_height="wrap_content"
                 >
 
-                <TextView android:id="@+id/requestTitle"
+                <TextView android:id="@+id/newsTitle"
                     android:textStyle="bold"
-                    android:textSize="26sp"
+                    android:textSize="36sp"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/rectangle_3_ek15_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Advisory request Form"
+                    android:text="Welcome Client!"
                     android:textAlignment="center"
                     android:gravity="center"
                     />
@@ -230,7 +157,7 @@
                     android:layout_width="288dp"
                     android:layout_height="63dp" />
 
-                <TextView android:id="@+id/requestText"
+                <TextView android:id="@+id/supportText"
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:textColor="@color/you_are_a_counsellor_color"
@@ -239,10 +166,38 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_centerInParent="true"
-                    android:text="Request"
+                    android:text="Advisory Support"
                     />
 
             </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/backloginButton"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/startOption"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="100dp"
+                    android:layout_height="39dp"
+                    android:background="@drawable/shadow_button_2" />
+
+                <TextView android:id="@+id/back"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/fullbackground_color"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back_string"
+                    />
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
     </RelativeLayout>
