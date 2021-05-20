@@ -57,7 +57,7 @@ public class twopass_write_test_client extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hikikomori_twopass_write_test);
-        fb=FirebaseDatabase.getInstance();
+        fb=FirebaseDatabase.getInstance(Const.DB_URL);
         tvResult=findViewById(R.id.tvResult);
         tvToBeTransmit=findViewById(R.id.tvToBeTransmit);
         btnGet=findViewById(R.id.btnGet);

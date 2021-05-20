@@ -19,6 +19,7 @@ import com.google.firebase.database.Transaction;
 
 import org.jetbrains.annotations.NotNull;
 
+import nnhl.project.ebank.Const;
 import nnhl.project.ebank.R;
 import java.util.Random;
 
@@ -33,7 +34,7 @@ public class twopass_write_test_counsellor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hikikomori_twopass_write_test);
-        fb= FirebaseDatabase.getInstance();
+        fb= FirebaseDatabase.getInstance(Const.DB_URL);
         tvResult=findViewById(R.id.tvResult);
         tvToBeTransmit=findViewById(R.id.tvToBeTransmit);
         btnGet=findViewById(R.id.btnGet);
