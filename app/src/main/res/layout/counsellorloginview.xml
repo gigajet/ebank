@@ -168,7 +168,7 @@
 
 
 			<RelativeLayout android:id="@+id/backloginButton"
-				android:layout_marginTop="20dp"
+				android:layout_marginTop="15dp"
 				android:layout_below="@+id/registerOption"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
@@ -196,7 +196,7 @@
 
 
 			<RelativeLayout android:id="@+id/loginOption"
-				android:layout_marginTop="425dp"
+				android:layout_marginTop="410dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
