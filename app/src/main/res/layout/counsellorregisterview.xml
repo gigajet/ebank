@@ -78,12 +78,14 @@
 				>
 
 				<ImageButton
+					android:foreground="?android:attr/selectableItemBackground"
 					android:id="@+id/backRegisterButton"
 					android:layout_width="100dp"
 					android:layout_height="39dp"
 					android:background="@drawable/shadow_button_2" />
 
-				<TextView android:id="@+id/back"
+				<TextView
+					android:id="@+id/back"
 					android:textStyle="bold"
 					android:textSize="19sp"
 					android:textColor="@color/fullbackground_color"
@@ -267,7 +269,9 @@
 				android:layout_height="wrap_content"
 				>
 
-				<ImageButton android:id="@+id/registerButton"
+				<ImageButton
+					android:foreground="?android:attr/selectableItemBackground"
+					android:id="@+id/registerButton"
 					android:background="@drawable/shadow_button"
 					android:layout_width="288dp"
 					android:layout_height="63dp"

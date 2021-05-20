@@ -82,6 +82,7 @@
 					>
 
 					<ImageButton
+						android:foreground="?android:attr/selectableItemBackground"
 						android:id="@+id/counsellorButton"
 						android:background="@drawable/shadow_button"
 						android:layout_width="288dp"
@@ -109,6 +110,7 @@
 					android:layout_height="wrap_content">
 
 					<ImageButton
+						android:foreground="?android:attr/selectableItemBackground"
 						android:id="@+id/clientButton"
 						android:background="@drawable/shadow_button"
 						android:layout_width="288dp"
