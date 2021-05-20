@@ -69,6 +69,37 @@
 
 			</RelativeLayout>
 
+			<RelativeLayout android:id="@+id/usernameinputtext"
+				android:layout_marginTop="275dp"
+				android:layout_marginStart="11dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				>
+
+				<TextView android:id="@+id/username_"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="@string/username__string"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					/>
+
+				<EditText
+					android:id="@+id/usernameLoginEdittext"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:layout_toRightOf="@+id/username_"
+					android:background="@drawable/rectangle_3_ek3_shape"
+					android:gravity="center"
+					android:hint="@string/nguyen_van_a_string"
+					android:inputType="text"
+					android:textAlignment="center" />
+
+			</RelativeLayout>
 
 			<RelativeLayout android:id="@+id/passwordinputtext"
 				android:layout_below="@id/usernameinputtext"
@@ -102,38 +133,6 @@
 
 			</RelativeLayout>
 
-
-			<RelativeLayout android:id="@+id/usernameinputtext"
-				android:layout_marginTop="275dp"
-				android:layout_marginStart="11dp"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_centerHorizontal="true"
-				>
-
-				<TextView android:id="@+id/username_"
-					android:textStyle="bold"
-					android:textSize="19sp"
-					android:textColor="@color/fullbackground_color"
-					android:layout_width="100dp"
-					android:layout_height="40dp"
-					android:text="@string/username__string"
-					android:gravity="center"
-					android:layout_centerVertical="true"
-					/>
-
-				<EditText
-					android:id="@+id/usernameLoginEdittext"
-					android:layout_width="280dp"
-					android:layout_height="40dp"
-					android:layout_toRightOf="@+id/username_"
-					android:background="@drawable/rectangle_3_ek3_shape"
-					android:gravity="center"
-					android:hint="@string/nguyen_van_a_string"
-					android:inputType="text"
-					android:textAlignment="center" />
-
-			</RelativeLayout>
 
 
 			<RelativeLayout android:id="@+id/registerOption"

@@ -85,7 +85,7 @@
 							android:layout_width="57.41dp"
 							android:layout_height="31.64dp" />
 
-						<TextView android:id="@+id/counsellor_name"
+						<TextView android:id="@+id/counsellorNameTextview"
 							android:textSize="19sp"
 							android:textColor="@color/your_satisfaction_our_honor_color"
 							android:layout_below="@+id/vector_ek8"
@@ -197,7 +197,6 @@
 
 			</RelativeLayout>
 
-
 			<RelativeLayout android:id="@+id/clientnametext_ek1"
 				android:layout_below="@+id/clientnametext"
 				android:layout_marginTop="8dp"
@@ -214,6 +213,7 @@
 					android:layout_width="80dp"
 					android:layout_height="40dp"
 					android:text="@string/topic__string"
+					android:gravity="center"
 					/>
 
 				<TextView android:id="@+id/requestContentTextview"
@@ -268,8 +268,6 @@
 
 				<ImageButton android:id="@+id/callButton"
 					android:background="@drawable/shadow_button_5"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
 					android:layout_width="163dp"
 					android:layout_height="63dp" />
 
