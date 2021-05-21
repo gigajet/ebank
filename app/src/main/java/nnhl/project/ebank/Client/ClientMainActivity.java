@@ -68,7 +68,6 @@ public class ClientMainActivity extends AppCompatActivity implements ClientMainP
 
 
         Picasso.get().load(link).into(imgView2);
-
         textView2.setVisibility(View.INVISIBLE);
     }
 
