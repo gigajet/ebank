@@ -144,6 +144,57 @@
             </RelativeLayout>
 
 
+            <RelativeLayout android:id="@+id/newsView"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/logoutOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/imageview_main_0"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+
+                    android:scaleType="fitXY"
+
+
+                    />
+                <TextView
+                    android:id="@+id/TextOfImgView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textSize="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_below="@+id/imageview_main_0"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/imageview_main_1"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_below="@+id/imageview_main_0"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/TextOfImgView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:layout_marginLeft="50dp"
+                    android:textStyle="bold"
+                    android:textSize="30dp"></TextView>
+            </RelativeLayout>
+
+
             <RelativeLayout android:id="@+id/startOption"
                 android:layout_marginTop="490dp"
                 android:layout_marginStart="25dp"

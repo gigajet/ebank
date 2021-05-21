@@ -32,6 +32,11 @@ public class CounsellorLoginPresenter {
     void CounsellorLogin(String account, String password)
     {
 
+        if (account.isEmpty() || password.isEmpty())
+        {
+            counsellorLoginView.ActionLoginWrongFormat();
+            return ;
+        }
         Query query = firebase.getReference().child(Const.TBL_counsellors).child(account);
 
 
@@ -45,11 +50,10 @@ public class CounsellorLoginPresenter {
                     if (p.getPassword().equals(password)) {
                         //Toast.makeText((Context) counsellorLoginView,password,Toast.LENGTH_SHORT).show();
                         counsellorLoginView.ActionLoginSuccess();
-
 //                            Intent intent = new Intent(activity, HomeActivity.class);
 //                            activity.startActivity(intent);
-
                     }
+                    else counsellorLoginView.ActionLoginFail();
                 }
                 else{
                     counsellorLoginView.ActionLoginFail();
@@ -67,5 +71,6 @@ public class CounsellorLoginPresenter {
     {
         public void ActionLoginSuccess();
         public void ActionLoginFail();
+        public void ActionLoginWrongFormat();
     }
 }
