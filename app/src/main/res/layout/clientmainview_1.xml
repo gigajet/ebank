@@ -144,7 +144,20 @@
             </RelativeLayout>
 
 
+            <RelativeLayout android:id="@+id/newsView"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/logoutOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/imageview_main_0"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
                     />
                 <ImageView
                     android:layout_below="@+id/imageview_main_0"
