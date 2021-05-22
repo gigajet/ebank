@@ -166,7 +166,8 @@
 
 
 			<RelativeLayout android:id="@+id/clientnametext"
-				android:layout_marginTop="160dp"
+				android:layout_above="@+id/clientnametext_ek1"
+				android:layout_marginBottom="8dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -198,8 +199,8 @@
 			</RelativeLayout>
 
 			<RelativeLayout android:id="@+id/clientnametext_ek1"
-				android:layout_below="@+id/clientnametext"
-				android:layout_marginTop="8dp"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="250dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -241,7 +242,7 @@
 					android:src="@drawable/rectangle_1_ek3"
 					android:contentDescription="rectangle_1_ek3"
 					android:layout_marginStart="0dp"
-					android:layout_marginTop="80dp"
+					android:layout_marginTop="140dp"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
 					android:scaleType="fitXY"
@@ -251,40 +252,81 @@
 					android:src="@drawable/rectangle_2_ek3"
 					android:contentDescription="rectangle_2_ek3"
 					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
+					android:layout_marginTop="20dp"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
-					android:scaleType="fitStart"/>
+					android:scaleType="fitXY"/>
 
 			</RelativeLayout>
 
 
-			<RelativeLayout android:id="@+id/callOption"
-				android:layout_below="@+id/startOption"
-				android:layout_marginTop="10dp"
-				android:layout_centerHorizontal="true"
+			<RelativeLayout
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="40dp"
 				>
 
-				<ImageButton
-					android:foreground="?android:attr/selectableItemBackground"
-					android:id="@+id/callButton"
-					android:background="@drawable/shadow_button_5"
-					android:layout_width="288dp"
-					android:layout_height="63dp" />
-
-				<TextView android:id="@+id/call"
-					android:textStyle="bold"
-					android:textSize="22sp"
-					android:textColor="@color/you_are_a_counsellor_color"
+				<RelativeLayout android:id="@+id/startOption"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					>
+
+					<ImageButton
+						android:foreground="?android:attr/selectableItemBackground"
+						android:id="@+id/startButton"
+						android:background="@drawable/shadow_button_4"
+						android:layout_width="163dp"
+						android:layout_height="63dp" />
+
+					<TextView android:id="@+id/start"
+						android:textStyle="bold"
+						android:textSize="22sp"
+						android:textColor="@color/you_are_a_counsellor_color"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerHorizontal="true"
+						android:layout_centerVertical="true"
+						android:layout_centerInParent="true"
+						android:text="@string/start_string"
+						/>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_marginBottom="40dp"
+					android:layout_toRightOf="@+id/startOption"
+					android:layout_marginLeft="40dp"
+					android:id="@+id/callOption"
 					android:layout_centerHorizontal="true"
-					android:layout_centerVertical="true"
-					android:layout_centerInParent="true"
-					android:text="@string/call_string"
-					/>
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					>
+
+					<ImageButton
+						android:foreground="?android:attr/selectableItemBackground"
+						android:id="@+id/callButton"
+						android:background="@drawable/shadow_button_5"
+						android:layout_width="163dp"
+						android:layout_height="63dp" />
+
+					<TextView android:id="@+id/call"
+						android:textStyle="bold"
+						android:textSize="22sp"
+						android:textColor="@color/you_are_a_counsellor_color"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerHorizontal="true"
+						android:layout_centerVertical="true"
+						android:layout_centerInParent="true"
+						android:text="@string/call_string"
+						/>
+
+				</RelativeLayout>
+
 
 			</RelativeLayout>
 
@@ -314,35 +356,6 @@
 					android:layout_centerVertical="true"
 					android:layout_centerInParent="true"
 					android:text="@string/log_out_string"
-					/>
-
-			</RelativeLayout>
-
-
-			<RelativeLayout android:id="@+id/startOption"
-				android:layout_marginTop="490dp"
-				android:layout_centerHorizontal="true"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				>
-
-				<ImageButton
-					android:foreground="?android:attr/selectableItemBackground"
-					android:id="@+id/startButton"
-					android:background="@drawable/shadow_button_4"
-					android:layout_width="288dp"
-					android:layout_height="63dp" />
-
-				<TextView android:id="@+id/start"
-					android:textStyle="bold"
-					android:textSize="22sp"
-					android:textColor="@color/you_are_a_counsellor_color"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_centerHorizontal="true"
-					android:layout_centerVertical="true"
-					android:layout_centerInParent="true"
-					android:text="@string/start_string"
 					/>
 
 			</RelativeLayout>
