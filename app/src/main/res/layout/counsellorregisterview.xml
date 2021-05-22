@@ -112,15 +112,13 @@
 
 				<TextView
 					android:id="@+id/back"
-					android:textStyle="bold"
-					android:textSize="19sp"
-					android:textColor="@color/fullbackground_color"
-					android:layout_centerHorizontal="true"
-					android:layout_marginTop="4dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
 					android:text="@string/back_string"
-					/>
+					android:textColor="@color/fullbackground_color"
+					android:textSize="19sp"
+					android:textStyle="bold" />
 
 			</RelativeLayout>
 

@@ -155,18 +155,43 @@
 
                 <ImageView
                     android:id="@+id/imageview_main_0"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+
+                    android:scaleType="fitXY"
+
+
+                    />
+                <TextView
+                    android:id="@+id/TextOfImgView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    />
+                    android:text="Loading..."
+                    android:textSize="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
                 <ImageView
                     android:layout_below="@+id/imageview_main_0"
                     android:layout_marginTop="5dp"
                     android:id="@+id/imageview_main_1"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_below="@+id/imageview_main_0"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/TextOfImgView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    />
+                    android:text="Loading..."
+                    android:layout_marginLeft="50dp"
+                    android:textStyle="bold"
+                    android:textSize="30dp"></TextView>
             </RelativeLayout>
 
 

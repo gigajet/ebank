@@ -69,4 +69,9 @@ public class CounsellorLoginActivity extends AppCompatActivity implements Counse
     public void ActionLoginFail() {
         Toast.makeText(CounsellorLoginActivity.this,"Login fail",Toast.LENGTH_LONG).show();
     }
+
+    @Override
+    public void ActionLoginWrongFormat(){
+        Toast.makeText(CounsellorLoginActivity.this,"Wrong format account or password",Toast.LENGTH_LONG).show();
+    }
 }
