@@ -96,7 +96,8 @@
 
 
             <RelativeLayout android:id="@+id/clientnametext"
-                android:layout_marginTop="160dp"
+                android:layout_above="@+id/clientnametext_ek1"
+                android:layout_marginBottom="8dp"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,8 +119,8 @@
 
 
             <RelativeLayout android:id="@+id/clientnametext_ek1"
-                android:layout_below="@+id/clientnametext"
-                android:layout_marginTop="8dp"
+                android:layout_above="@+id/startrequestOption"
+                android:layout_marginBottom="120dp"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -150,7 +151,7 @@
                     android:src="@drawable/rectangle_1_ek3"
                     android:contentDescription="rectangle_1_ek3"
                     android:layout_marginStart="0dp"
-                    android:layout_marginTop="110dp"
+                    android:layout_marginTop="140dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
@@ -160,16 +161,16 @@
                     android:src="@drawable/rectangle_2_ek3"
                     android:contentDescription="rectangle_2_ek3"
                     android:layout_marginStart="0dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitStart"/>
+                    android:scaleType="fitXY"/>
 
             </RelativeLayout>
 
             <RelativeLayout android:id="@+id/backloginButton"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/startrequestOption"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -221,8 +222,8 @@
 
 
             <RelativeLayout android:id="@+id/startrequestOption"
-                android:layout_marginTop="490dp"
-                android:layout_marginStart="25dp"
+                android:layout_above="@+id/backloginButton"
+                android:layout_marginBottom="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"

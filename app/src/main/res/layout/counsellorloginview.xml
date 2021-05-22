@@ -70,8 +70,8 @@
 			</RelativeLayout>
 
 			<RelativeLayout android:id="@+id/usernameinputtext"
-				android:layout_marginTop="275dp"
-				android:layout_marginStart="11dp"
+				android:layout_above="@+id/passwordinputtext"
+				android:layout_marginBottom="8dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerHorizontal="true"
@@ -102,8 +102,8 @@
 			</RelativeLayout>
 
 			<RelativeLayout android:id="@+id/passwordinputtext"
-				android:layout_below="@id/usernameinputtext"
-				android:layout_marginTop="8dp"
+				android:layout_above="@+id/loginOption"
+				android:layout_marginBottom="90dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerHorizontal="true"
@@ -137,8 +137,8 @@
 
 			<RelativeLayout android:id="@+id/registerOption"
 				android:layout_centerHorizontal="true"
-				android:layout_below="@+id/loginOption"
-				android:layout_marginTop="10dp"
+				android:layout_above="@+id/backloginButton"
+				android:layout_marginBottom="15dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				>
@@ -170,8 +170,8 @@
 
 
 			<RelativeLayout android:id="@+id/backloginButton"
-				android:layout_marginTop="15dp"
-				android:layout_below="@+id/registerOption"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="40dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -199,7 +199,8 @@
 
 
 			<RelativeLayout android:id="@+id/loginOption"
-				android:layout_marginTop="410dp"
+				android:layout_above="@+id/registerOption"
+				android:layout_marginBottom="10dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -293,7 +294,8 @@
 				android:textSize="28sp"
 				android:textColor="@color/_bg__startview_ek2_color"
 				android:layout_centerHorizontal="true"
-				android:layout_marginTop="200dp"
+				android:layout_above="@id/usernameinputtext"
+				android:layout_marginBottom="80dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/welcome_counsellor___string"
