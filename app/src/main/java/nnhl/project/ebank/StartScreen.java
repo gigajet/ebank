@@ -18,6 +18,7 @@ public class StartScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startview);
+        Global.getInstance().GetCurrentFCMToken();
         counsellerBtn = (ImageButton) findViewById(R.id.counsellorButton);
         counsellerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
