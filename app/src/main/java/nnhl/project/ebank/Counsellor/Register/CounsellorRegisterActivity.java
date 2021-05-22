@@ -17,7 +17,7 @@ import com.google.firebase.FirebaseApp;
 
 public class CounsellorRegisterActivity extends AppCompatActivity implements ICounsellorRegisterView {
 
-    EditText edPhone, edEmail, edSID, edUserName, edPassword;
+    EditText edPhone, edEmail, edSID, edUserName, edPassword, edConfirmPassword;
     ImageButton btnRegister;
     ImageButton btnBack;
     ICounsellorRegisterPresenter presenter;
@@ -36,6 +36,7 @@ public class CounsellorRegisterActivity extends AppCompatActivity implements ICo
         edPhone=findViewById(R.id.telephoneEdittext);
         edUserName=findViewById(R.id.usernameRegisterEdittext);
         edPassword=findViewById(R.id.passwordRegisterEdittext);
+        edConfirmPassword=findViewById(R.id.confirmPasswordRegisterEdittext);
         edSID=findViewById(R.id.securityIDEdittext);
         edEmail=findViewById(R.id.emailEdittext);
         btnRegister=findViewById(R.id.registerButton);
@@ -52,9 +53,15 @@ public class CounsellorRegisterActivity extends AppCompatActivity implements ICo
                     phone=edPhone.getText().toString(),
                     SID=edSID.getText().toString(),
                     user_name=edUserName.getText().toString(),
-                    password=edPassword.getText().toString();
-            CounsellorModel counsellorModel = new CounsellorModel(email,user_name,password,phone);
-            presenter.register(counsellorModel, SID);
+                    password=edPassword.getText().toString(),
+                    confirm_password=edConfirmPassword.getText().toString();
+            if (password.equals(confirm_password)) {
+                CounsellorModel counsellorModel = new CounsellorModel(email, user_name, password, phone);
+                presenter.register(counsellorModel, SID);
+            }
+            else {
+                Toast.makeText(this, "Confirm password not match", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
