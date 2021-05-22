@@ -75,7 +75,7 @@
 				android:layout_above="@+id/usernameinputtext_ek1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginBottom="20dp"
+				android:layout_marginBottom="30dp"
 				>
 
 				<TextView android:id="@+id/requestTitle"
@@ -115,6 +115,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_centerHorizontal="true"
+					android:layout_marginTop="4dp"
 					android:text="@string/back_string"
 					android:textColor="@color/fullbackground_color"
 					android:textSize="19sp"
@@ -125,7 +126,7 @@
 
 
 			<RelativeLayout android:id="@+id/usernameinputtext_ek1"
-				android:layout_above="@+id/passwordinputtext_ek1"
+				android:layout_above="@+id/telephoneinputtext"
 				android:layout_marginBottom="5dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
@@ -151,39 +152,6 @@
 					android:gravity="center"
 					android:hint="@string/nguyen_van_a_ek1_string"
 					android:inputType="text"
-					android:textAlignment="center"
-					android:textSize="19sp" />
-
-			</RelativeLayout>
-
-			<RelativeLayout android:id="@+id/passwordinputtext_ek1"
-				android:layout_above="@+id/telephoneinputtext"
-				android:layout_centerHorizontal="true"
-				android:layout_marginBottom="5dp"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				>
-
-				<TextView android:id="@+id/password__ek1"
-					android:gravity="center"
-					android:layout_centerVertical="true"
-					android:textStyle="bold"
-					android:textSize="19sp"
-					android:textColor="@color/fullbackground_color"
-					android:layout_width="100dp"
-					android:layout_height="40dp"
-					android:text="@string/password__ek1_string"
-					/>
-
-				<EditText
-					android:id="@+id/passwordRegisterEdittext"
-					android:layout_width="280dp"
-					android:layout_height="40dp"
-					android:layout_toRightOf="@+id/password__ek1"
-					android:background="@drawable/rectangle_3_ek10_shape"
-					android:gravity="center"
-					android:hint="***********"
-					android:inputType="textPassword"
 					android:textAlignment="center"
 					android:textSize="19sp" />
 
@@ -215,7 +183,7 @@
 					android:layout_toRightOf="@+id/telephone_"
 					android:background="@drawable/rectangle_3_ek9_shape"
 					android:gravity="center"
-					android:hint="+84-999-999-999"
+					android:hint="+84-999-999"
 					android:inputType="number"
 					android:textAlignment="center"
 					android:textSize="19sp" />
@@ -223,7 +191,7 @@
 			</RelativeLayout>
 
 			<RelativeLayout android:id="@+id/emailinputtext"
-				android:layout_above="@+id/sidinputtext"
+				android:layout_above="@+id/passwordinputtext_ek1"
 				android:layout_marginBottom="5dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
@@ -255,10 +223,77 @@
 
 			</RelativeLayout>
 
+			<RelativeLayout android:id="@+id/passwordinputtext_ek1"
+				android:layout_above="@+id/passwordinputtext_ek2"
+				android:layout_centerHorizontal="true"
+				android:layout_marginBottom="5dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<TextView android:id="@+id/password__ek1"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="@string/password__ek1_string"
+					/>
+
+				<EditText
+					android:id="@+id/passwordRegisterEdittext"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:layout_toRightOf="@+id/password__ek1"
+					android:background="@drawable/rectangle_3_ek10_shape"
+					android:gravity="center"
+					android:hint="***********"
+					android:inputType="textPassword"
+					android:textAlignment="center"
+					android:textSize="19sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout android:id="@+id/passwordinputtext_ek2"
+				android:layout_above="@+id/sidinputtext"
+				android:layout_centerHorizontal="true"
+				android:layout_marginBottom="5dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<TextView android:id="@+id/confirmPassword"
+					android:gravity="center"
+					android:layout_centerVertical="true"
+					android:textStyle="bold"
+					android:textSize="19sp"
+					android:textColor="@color/fullbackground_color"
+					android:layout_width="100dp"
+					android:layout_height="40dp"
+					android:text="Confirm:"
+					/>
+
+				<EditText
+					android:id="@+id/confirmPasswordRegisterEdittext"
+					android:layout_width="280dp"
+					android:layout_height="40dp"
+					android:layout_toRightOf="@+id/confirmPassword"
+					android:background="@drawable/rectangle_3_ek10_shape"
+					android:gravity="center"
+					android:hint="Retype password"
+					android:inputType="textPassword"
+					android:textAlignment="center"
+					android:textSize="19sp" />
+
+			</RelativeLayout>
+
+
 			<RelativeLayout android:id="@+id/sidinputtext"
 				android:layout_above="@+id/registerPage"
 				android:layout_centerHorizontal="true"
-				android:layout_marginBottom="80dp"
+				android:layout_marginBottom="55dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				>
@@ -271,7 +306,7 @@
 					android:textColor="@color/fullbackground_color"
 					android:layout_width="100dp"
 					android:layout_height="40dp"
-					android:text="@string/security_id__string"
+					android:text="Security ID: "
 					/>
 
 				<EditText android:id="@+id/securityIDEdittext"

@@ -64,8 +64,8 @@
 							android:layout_centerHorizontal="true"
 							android:layout_marginStart="15dp"
 							android:layout_marginTop="5dp"
-							android:layout_width="28.24dp"
-							android:layout_height="37.59dp" />
+							android:layout_width="28dp"
+							android:layout_height="37dp" />
 
 						<ImageView android:id="@+id/vector_ek7"
 							android:src="@drawable/vector_ek7"
@@ -73,8 +73,8 @@
 							android:contentDescription="vector_ek7"
 							android:layout_marginStart="6dp"
 							android:layout_marginTop="0dp"
-							android:layout_width="46.41dp"
-							android:layout_height="37.6dp" />
+							android:layout_width="46dp"
+							android:layout_height="37dp" />
 
 						<ImageView android:id="@+id/vector_ek8"
 							android:src="@drawable/vector_ek8"
@@ -82,20 +82,38 @@
 							android:contentDescription="vector_ek8"
 							android:layout_marginStart="0dp"
 							android:layout_marginTop="41dp"
-							android:layout_width="57.41dp"
-							android:layout_height="31.64dp" />
+							android:layout_width="57dp"
+							android:layout_height="31dp" />
 
-						<TextView android:id="@+id/counsellorNameTextview"
-							android:textSize="19sp"
-							android:textColor="@color/your_satisfaction_our_honor_color"
+						<RelativeLayout android:id="@+id/editOption"
 							android:layout_below="@+id/vector_ek8"
-							android:layout_centerHorizontal="true"
+							android:layout_marginTop="8dp"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="Counsellor \n name"
-							android:gravity="center"
-							android:textAlignment="center"
-							/>
+							>
+
+							<ImageButton android:id="@+id/editButton"
+								android:foreground="?android:attr/selectableItemBackground"
+								android:background="@drawable/shadow_button_2"
+								android:layout_marginStart="0dp"
+								android:layout_marginTop="0dp"
+								android:layout_width="105dp"
+								android:layout_height="39dp" />
+
+							<TextView android:id="@+id/edit_info"
+								android:textStyle="bold"
+								android:textSize="19sp"
+								android:textColor="@color/fullbackground_color"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_centerHorizontal="true"
+								android:layout_marginTop="4dp"
+								android:text="Profile"
+								android:textAlignment="center"
+								/>
+
+						</RelativeLayout>
+
 
 					</RelativeLayout>
 
@@ -118,8 +136,8 @@
 					android:textColor="@color/your_satisfaction_our_honor_color"
 					android:layout_marginLeft="63dp"
 					android:layout_marginTop="34dp"
-					android:layout_width="82.43dp"
-					android:layout_height="45.67dp"
+					android:layout_width="82dp"
+					android:layout_height="45dp"
 					android:text="@string/group_ek8_string"
 					/>
 
@@ -129,8 +147,8 @@
 					android:textColor="@color/your_satisfaction_our_honor_color"
 					android:layout_marginLeft="63dp"
 					android:layout_marginTop="8dp"
-					android:layout_width="86dp"
-					android:layout_height="50.17dp"
+					android:layout_width="82dp"
+					android:layout_height="45dp"
 					android:text="@string/nnhl_ek3_string"
 					/>
 
@@ -150,13 +168,14 @@
 						android:layout_height="wrap_content"
 						>
 
-						<ImageView android:id="@+id/vector_ek9"
-							android:src="@drawable/vector_ek9"
-							android:contentDescription="vector_ek9"
+						<ImageView
+							android:id="@+id/vector_ek9"
+							android:layout_width="59.13dp"
+							android:layout_height="51.8dp"
 							android:layout_marginStart="0dp"
 							android:layout_marginTop="0dp"
-							android:layout_width="59.13dp"
-							android:layout_height="51.8dp" />
+							android:contentDescription="vector_ek9"
+							android:src="@drawable/vector_ek9" />
 
 					</RelativeLayout>
 
@@ -340,9 +359,8 @@
 				>
 
 				<ImageButton android:id="@+id/logoutButton"
+					android:foreground="?android:attr/selectableItemBackground"
 					android:background="@drawable/shadow_button_3"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
 					android:layout_width="105dp"
 					android:layout_height="39dp" />
 
@@ -353,8 +371,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_centerHorizontal="true"
-					android:layout_centerVertical="true"
-					android:layout_centerInParent="true"
+					android:layout_marginTop="4dp"
 					android:text="@string/log_out_string"
 					/>
 
