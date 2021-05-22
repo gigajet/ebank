@@ -34,7 +34,7 @@ public class ClientRequestPresenter {
         listen_ref=null;
     }
 
-    void request (String client_name, String req_content) {
+    void request (String client_name, String req_content, String fcm_token) {
         really_complete=false;
         JSONObject data=new JSONObject();
         jitsi_room= Util.RandomJitsiRoomName();
@@ -43,6 +43,7 @@ public class ClientRequestPresenter {
             data.put("last_write", "client");
             data.put("client_name", client_name);
             data.put("req_content",req_content);
+            data.put("fcm_token", fcm_token);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -69,7 +70,7 @@ public class ClientRequestPresenter {
 
                             //the other counsellor data
                             JSONObject response=new JSONObject(data,
-                                    new String[]{"last_write", "client_name", "req_content"});
+                                    new String[]{"last_write", "client_name", "req_content", "fcm_token"});
                             waiting_counsellor_data.setValue(response.toString());
                         } catch (JSONException e) {
                             e.printStackTrace();

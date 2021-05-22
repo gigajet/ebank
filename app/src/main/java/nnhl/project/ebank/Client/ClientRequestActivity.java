@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 public class ClientRequestActivity extends AppCompatActivity implements ClientRequestPresenter.View {
     EditText edClientName,edReqContent;
@@ -33,7 +34,8 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     }
 
     public void onclick_request(View view) {
-        presenter.request(edClientName.getText().toString(), edReqContent.getText().toString());
+        presenter.request(edClientName.getText().toString(), edReqContent.getText().toString(),
+                Global.getInstance().get_fcm_token());
         setContentView(R.layout.clientwaitingview);
     }
 

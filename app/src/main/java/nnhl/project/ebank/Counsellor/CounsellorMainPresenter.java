@@ -12,18 +12,33 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.Constants;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import nnhl.project.ebank.ApiClient;
+import nnhl.project.ebank.ApiService;
 import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Util;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CounsellorMainPresenter {
     View view;
     boolean ready_to_call;
-    String jitsi_room, client_name, req_content;
+    String jitsi_room;
+    String client_name;
+    String req_content;
+
+    public String get_client_fcm_token() {
+        return client_fcm_token;
+    }
+
+    String client_fcm_token;
     FirebaseDatabase fb;
     DatabaseReference listen_ref;
     String TAG="COUNSELLOR-MAIN";
@@ -37,6 +52,47 @@ public class CounsellorMainPresenter {
     boolean is_ready_to_call() {return ready_to_call;}
     String get_videocall_token() {
         return jitsi_room;
+    }
+
+    void sendRemoteMessage (String remoteMessageBody, Callback<String> callback) {
+        ApiClient.getInstance().create(ApiService.class)
+                .sendRemoteMessage(Const.getRemoteHeaders(), remoteMessageBody)
+                .enqueue(callback);
+    }
+
+    void call () {
+        Callback<String> callback = new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                if (response.isSuccessful()) {
+                    view.call_sucess();
+                }
+                else {
+                    view.call_failure(response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                view.call_failure(t.getMessage());
+            }
+        };
+
+        try {
+            JSONArray tokens=new JSONArray();
+            tokens.put(client_fcm_token);
+            JSONObject body=new JSONObject();
+            JSONObject data=new JSONObject();
+
+            //Put something to data here
+            data.put("motivation", "none");
+
+            body.put(Const.REMOTE_MSG_DATA, data);
+            body.put(Const.REMOTE_MSG_REGISTRATION_IDS, tokens);
+            sendRemoteMessage(body.toString(), callback);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     void start () {
@@ -71,6 +127,7 @@ public class CounsellorMainPresenter {
                             jitsi_room=obj.getString("room_jitsi");
                             client_name=obj.getString("client_name");
                             req_content=obj.getString("req_content");
+                            client_fcm_token=obj.getString("fcm_token");
 
                             //the other counsellor data
                             JSONObject response=new JSONObject(data,
@@ -109,6 +166,7 @@ public class CounsellorMainPresenter {
                             ready_to_call=true;
                             view.update_client_info(client_name, req_content);
                             Log.d(TAG+"X","Jitsi token: "+jitsi_room);
+                            Log.d(TAG,"client fcm-token: "+client_fcm_token);
 
                             listen_ref.removeValue();
                             listen_ref.removeEventListener(this);
@@ -134,6 +192,7 @@ public class CounsellorMainPresenter {
                         ready_to_call=true;
                         view.update_client_info(client_name, req_content);
                         Log.d(TAG,"Jitsi token: "+jitsi_room);
+                        Log.d(TAG,"client fcm-token: "+client_fcm_token);
                     }
                 }
             }
@@ -142,5 +201,7 @@ public class CounsellorMainPresenter {
 
     public interface View {
         void update_client_info(String client_name, String req_content);
+        void call_failure (String error_msg);
+        void call_sucess();
     }
 }

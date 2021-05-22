@@ -1,5 +1,7 @@
 package nnhl.project.ebank;
 
+import java.util.HashMap;
+
 public class Const {
     //FirebaseDatabase.getInstance(DB_URL); <- do not leave null here because not us-central1
     //
@@ -22,4 +24,17 @@ public class Const {
         |       |- phone
         |       |- email
      */
+
+    public static final String REMOTE_MSG_AUTHORIZATION = "Authorization";
+    public static final String REMOTE_MSG_CONTENT_TYPE = "Content-Type";
+    public static final String REMOTE_MSG_DATA = "data";
+    public static final String REMOTE_MSG_REGISTRATION_IDS = "registration_ids";
+    public static final HashMap<String, String> getRemoteHeaders() {
+        HashMap<String, String> header = new HashMap<>();
+        header.put(Const.REMOTE_MSG_AUTHORIZATION,
+                "key=AAAA2CG8k_8:APA91bFDBd9kInDYSMAFNBI944Q-mhnfCaYOyyuZpRkZuwRhy22v2XY-m7n__Kk5mkCcbuN0Jz1yhFbAVZS-aqgH93yAu7UMLq5WUlWQkN3jZun3keM6KPOlMJvAcjapdBic3jGikID0");
+        header.put(Const.REMOTE_MSG_CONTENT_TYPE,
+                "application/json");
+        return header;
+    }
 }
