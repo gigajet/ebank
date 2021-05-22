@@ -49,8 +49,10 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     @Override
     public void fetch_callback(String videocall_token) {
         Log.d(TAG,"Jitsi token: "+videocall_token);
+        /*
         Intent intent=new Intent(ClientRequestActivity.this, VideoCallActivity.class);
         intent.putExtra("jitsi_room", videocall_token);
         startActivity(intent);
+         */
     }
 }
