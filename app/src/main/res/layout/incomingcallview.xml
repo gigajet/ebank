@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		nnhl
+     *	@date 		1621334150672
+     *	@title 		Page 1
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <RelativeLayout android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:id="@+id/page_counsellormainview_ek1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View android:id="@+id/_bg__counsellormainview_ek2"
+                android:background="@drawable/_bg__counsellormainview_ek2_shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View android:id="@+id/fullbackground_ek3"
+                android:background="@drawable/buildingbackground_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+
+            <RelativeLayout android:id="@+id/incomingcall_logo_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <RelativeLayout android:id="@+id/calllogo_ek1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    >
+                    <ImageView
+                        android:id="@+id/call_logo_background"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="vector_ek9"
+                        android:background="@drawable/call_logo"/>
+                    <ImageView
+                        android:id="@+id/vector_ek9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="vector_ek9"
+                        android:background="@drawable/vector_ek14"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <TextView android:id="@+id/nnhl_ek3"
+                    android:layout_below="@id/calllogo_ek1"
+                    android:textSize="39sp"
+                    android:textColor="@color/rectangle_3_ek15_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incoming call"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
+                >
+
+                <RelativeLayout android:id="@+id/answerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    >
+
+                    <ImageButton
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/startButton"
+                        android:background="@drawable/shadow_button_5"
+                        android:layout_width="163dp"
+                        android:layout_height="63dp" />
+
+                    <TextView android:id="@+id/start"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/you_are_a_counsellor_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
+                        android:text="Accept"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="40dp"
+                    android:layout_toRightOf="@+id/answerButton"
+                    android:layout_marginLeft="40dp"
+                    android:id="@+id/callOption"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    >
+
+                    <ImageButton
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/declineButton"
+                        android:background="@drawable/shadow_button_3"
+                        android:layout_width="163dp"
+                        android:layout_height="63dp" />
+
+                    <TextView android:id="@+id/call"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/you_are_a_counsellor_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
+                        android:text="Decline"
+                        />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
