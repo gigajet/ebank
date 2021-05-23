@@ -90,6 +90,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
 
     @Override
     public void call_sucess() {
+        Toast.makeText(this, "FCM sent to client", Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(this, OutgoingActivity.class);
         intent.putExtra("jitsi_room", presenter.get_videocall_token());
         intent.putExtra("client_fcm", presenter.get_client_fcm_token());

@@ -25,6 +25,9 @@ public class Const {
         |       |- email
      */
 
+    public static final String REMOTE_MSG_TYPE = "type";
+    public static final String REMOTE_MSG_CALL = "call";
+    public static final String REMOTE_MSG_CALL_TOKEN = "jitsi_room";
     public static final String REMOTE_MSG_AUTHORIZATION = "Authorization";
     public static final String REMOTE_MSG_CONTENT_TYPE = "Content-Type";
     public static final String REMOTE_MSG_DATA = "data";

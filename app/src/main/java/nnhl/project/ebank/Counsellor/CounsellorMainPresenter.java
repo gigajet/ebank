@@ -55,6 +55,7 @@ public class CounsellorMainPresenter {
     }
 
     void sendRemoteMessage (String remoteMessageBody, Callback<String> callback) {
+        Log.d("FCM", "sendRemoteMessage: "+remoteMessageBody);
         ApiClient.getInstance().create(ApiService.class)
                 .sendRemoteMessage(Const.getRemoteHeaders(), remoteMessageBody)
                 .enqueue(callback);
@@ -85,6 +86,8 @@ public class CounsellorMainPresenter {
             JSONObject data=new JSONObject();
 
             //Put something to data here
+            data.put(Const.REMOTE_MSG_TYPE, Const.REMOTE_MSG_CALL);
+            data.put(Const.REMOTE_MSG_CALL_TOKEN, get_videocall_token());
             data.put("motivation", "none");
 
             body.put(Const.REMOTE_MSG_DATA, data);
