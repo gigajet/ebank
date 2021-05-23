@@ -13,6 +13,7 @@ public class Global {
     private static Global instance=new Global();
     private Global() {
         init_fcm_token();
+        this.data=new HashMap<>();
     }
 
     private void init_fcm_token() {
