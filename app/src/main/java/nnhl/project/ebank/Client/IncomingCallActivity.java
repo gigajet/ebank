@@ -1,8 +1,13 @@
 package nnhl.project.ebank.Client;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,12 +37,40 @@ public class IncomingCallActivity extends AppCompatActivity implements IncomingC
     @Override
     protected void onResume() {
         super.onResume();
+        /*
         String nenthoatra = (String) Global.getInstance().getData().get(Const.TAG_INCOMING_STAY);
         if (nenthoatra == null || nenthoatra.equals(Const.TAG_NO)) {
             Global.getInstance().getData().put(Const.TAG_INCOMING_STAY,Const.TAG_YES);
             finish();
         }
         else ;
+         */
+    }
+
+    private BroadcastReceiver callResponseReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String type=intent.getStringExtra(Const.REMOTE_MSG_CALL_RESPONSED);
+            if (type !=null) {
+                if (type.equals(Const.REMOTE_MSG_CANCEL_CALL)) {
+                    finish(); //jitsi will run another place
+                }
+            }
+        }
+    };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(
+                callResponseReceiver,
+                new IntentFilter(Const.REMOTE_MSG_CALL_RESPONSED));
+    }
+
+    @Override
+    protected void onStop() {
+        LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(callResponseReceiver);
+        super.onStop();
     }
 
     private void initComponents() {
@@ -69,6 +102,12 @@ public class IncomingCallActivity extends AppCompatActivity implements IncomingC
         Intent intent=new Intent(this, VideoCallActivity.class);
         intent.putExtra(Const.TAG_TOKEN_VIDEOCALL, videocall_token);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        finish();
     }
 
     @Override

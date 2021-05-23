@@ -5,6 +5,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -33,6 +34,14 @@ public class MessageService extends FirebaseMessagingService {
         String msg_type=remoteMessage.getData().get(Const.REMOTE_MSG_TYPE);
 
         if (msg_type!=null) {
+
+            if (msg_type.equals(Const.REMOTE_MSG_ACCEPT_CALL)
+                    || msg_type.equals(Const.REMOTE_MSG_DENY_CALL)
+                    || msg_type.equals(Const.REMOTE_MSG_CANCEL_CALL)) {
+                Intent intent = new Intent(Const.REMOTE_MSG_CALL_RESPONSED);
+                intent.putExtra(Const.REMOTE_MSG_CALL_RESPONSED, msg_type);
+                LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
+            }
             if (msg_type.equals(Const.REMOTE_MSG_CALL)) {
                 Intent intent=new Intent(getApplicationContext(), IncomingCallActivity.class);
                 intent.putExtra(Const.REMOTE_MSG_CALL_TOKEN,
@@ -54,6 +63,7 @@ public class MessageService extends FirebaseMessagingService {
             if (msg_type.equals(Const.REMOTE_MSG_DENY_CALL)) {
                 Global.getInstance().getData().put(Const.TAG_WAITING_FOR_CALL, Const.TAG_NO);
             }
+
         }
     }
 }

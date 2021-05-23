@@ -1,11 +1,13 @@
 package nnhl.project.ebank.Client;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import nnhl.project.ebank.Const;
@@ -57,6 +59,12 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
         //End request here...
         setContentView(R.layout.clientrequestview);
         initRequestComponents();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        onclick_endrequest(null);
     }
 
     @Override
