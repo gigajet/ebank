@@ -78,7 +78,6 @@ public class VideoCallActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
-        Global.getInstance().getData().put(Const.TAG_INCOMING_STAY,Const.TAG_NO);
         super.onDestroy();
     }
 
@@ -110,6 +109,9 @@ public class VideoCallActivity extends AppCompatActivity {
                     break;
                 case PARTICIPANT_JOINED:
                     Log.i(TAG,"Participant joined%s" + event.getData().get("name"));
+                    break;
+                case CONFERENCE_TERMINATED:
+                    finish();
                     break;
             }
         }

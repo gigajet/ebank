@@ -52,8 +52,7 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
         String tmp = (String) Global.getInstance().getData().get(Const.TAG_CALL_COMPLETE);
         if (tmp!=null && tmp.equals(Const.TAG_YES)) {
             Global.getInstance().getData().put(Const.TAG_CALL_COMPLETE, Const.TAG_NO);
-            setContentView(R.layout.clientrequestview);
-            initRequestComponents();
+            finish();
         }
     }
 
