@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Counsellor.VideoCall.OutgoingActivity;
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
 import nnhl.project.ebank.Global;
@@ -94,6 +95,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
     @Override
     public void call_sucess() {
         Toast.makeText(this, "FCM sent to client", Toast.LENGTH_SHORT).show();
+        Global.getInstance().getData().put(Const.TAG_WAITING_FOR_CALL, Const.TAG_YES);
         Intent intent=new Intent(this, OutgoingActivity.class);
         intent.putExtra("jitsi_room", presenter.get_videocall_token());
         intent.putExtra("client_fcm", presenter.get_client_fcm_token());

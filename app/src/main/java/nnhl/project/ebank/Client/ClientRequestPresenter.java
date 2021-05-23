@@ -18,13 +18,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.Util;
 
 public class ClientRequestPresenter {
     View view;
     FirebaseDatabase fb;
     String TAG="CLIENT-REQUEST";
-    String jitsi_room;
+    String jitsi_room, counsellor_fcm_token;
     DatabaseReference listen_ref;
     boolean really_complete;
     public ClientRequestPresenter(View view) {
@@ -67,6 +68,7 @@ public class ClientRequestPresenter {
                             JSONObject obj=new JSONObject(tmp);
                             if (obj.getString("last_write")=="client") continue;
                             jitsi_room=obj.getString("room_jitsi");
+                            counsellor_fcm_token=obj.getString("fcm_token");
 
                             //the other counsellor data
                             JSONObject response=new JSONObject(data,
@@ -98,11 +100,13 @@ public class ClientRequestPresenter {
                                 JSONObject tmp_json=new JSONObject(tmp);
                                 if (tmp_json.getString("last_write").equals("client")) return;
                                 //Add code here if you wanna read things sent from counsellor
+                                counsellor_fcm_token=tmp_json.getString("fcm_token");
                             } catch (JSONException e) {
                                 return;
                                 //e.printStackTrace();
                             }
                             //Complete callback
+                            client_readcomplete();
                             view.fetch_callback(jitsi_room);
 
                             listen_ref.removeValue();
@@ -126,11 +130,16 @@ public class ClientRequestPresenter {
                 else {
                     if (really_complete) {
                         //Complete callback
+                        client_readcomplete();
                         view.fetch_callback(jitsi_room);
                     }
                 }
             }
         }, false);
+    }
+
+    private void client_readcomplete() {
+        Global.getInstance().getData().put(Const.TAG_COUNSELLOR_FCM_TOKEN, counsellor_fcm_token);
     }
 
     public interface View {

@@ -21,6 +21,7 @@ import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import nnhl.project.ebank.Const;
 import nnhl.project.ebank.R;
 
 public class VideoCallActivity extends AppCompatActivity {
@@ -60,7 +61,7 @@ public class VideoCallActivity extends AppCompatActivity {
 
         registerForBroadcastMessages();
 
-        String text=getIntent().getStringExtra("jitsi_room");
+        String text=getIntent().getStringExtra(Const.TAG_TOKEN_VIDEOCALL);
         JitsiMeetConferenceOptions options
                 = new JitsiMeetConferenceOptions.Builder()
                 .setRoom(text)

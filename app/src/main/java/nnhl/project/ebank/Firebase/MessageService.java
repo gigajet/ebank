@@ -1,6 +1,7 @@
 package nnhl.project.ebank.Firebase;
 
 import android.content.Intent;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,8 @@ import java.util.Map;
 
 import nnhl.project.ebank.Client.IncomingCallActivity;
 import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Global;
 
 public class MessageService extends FirebaseMessagingService {
     @Override
@@ -36,6 +39,18 @@ public class MessageService extends FirebaseMessagingService {
                         remoteMessage.getData().get(Const.REMOTE_MSG_CALL_TOKEN));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+            }
+            if (msg_type.equals(Const.REMOTE_MSG_ACCEPT_CALL)) {
+                //kill activity IncomingCallActivity, but don't know how
+                Global.getInstance().getData().put(Const.TAG_WAITING_FOR_CALL, Const.TAG_NO);
+                Intent intent=new Intent(getApplicationContext(), VideoCallActivity.class);
+                intent.putExtra(Const.TAG_COUNSELLOR_FCM_TOKEN,
+                        remoteMessage.getData().get(Const.TAG_COUNSELLOR_FCM_TOKEN));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+            if (msg_type.equals(Const.REMOTE_MSG_DENY_CALL)) {
+                Global.getInstance().getData().put(Const.TAG_WAITING_FOR_CALL, Const.TAG_NO);
             }
         }
     }

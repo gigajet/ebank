@@ -40,4 +40,12 @@ public class Const {
                 "application/json");
         return header;
     }
+
+    public static final String REMOTE_MSG_ACCEPT_CALL = "accept";
+    public static final String REMOTE_MSG_DENY_CALL = "deny";
+    public static final String TAG_TOKEN_VIDEOCALL = REMOTE_MSG_CALL_TOKEN;
+    public static final String TAG_COUNSELLOR_FCM_TOKEN = "counsellor_fcm";
+    public static final String TAG_WAITING_FOR_CALL = "waiting_for_call";
+    public static final String TAG_YES = "yes";
+    public static final String TAG_NO = "no";
 }

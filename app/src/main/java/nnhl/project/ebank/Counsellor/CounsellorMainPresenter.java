@@ -55,12 +55,7 @@ public class CounsellorMainPresenter {
         return jitsi_room;
     }
 
-    void sendRemoteMessage (String remoteMessageBody, Callback<String> callback) {
-        Log.d("FCM", "sendRemoteMessage: "+remoteMessageBody);
-        ApiClient.getInstance().create(ApiService.class)
-                .sendRemoteMessage(Const.getRemoteHeaders(), remoteMessageBody)
-                .enqueue(callback);
-    }
+
 
     void call () {
         Callback<String> callback = new Callback<String>() {
@@ -93,7 +88,7 @@ public class CounsellorMainPresenter {
 
             body.put(Const.REMOTE_MSG_DATA, data);
             body.put(Const.REMOTE_MSG_REGISTRATION_IDS, tokens);
-            sendRemoteMessage(body.toString(), callback);
+            Util.sendRemoteMessage(body.toString(), callback);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -106,6 +101,7 @@ public class CounsellorMainPresenter {
         try {
             data.put("room_jitsi",jitsi_room);
             data.put("last_write", "counsellor");
+            data.put("fcm_token", Global.getInstance().get_fcm_token());
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -135,7 +131,7 @@ public class CounsellorMainPresenter {
 
                             //the other counsellor data
                             JSONObject response=new JSONObject(data,
-                                    new String[]{"last_write"});
+                                    new String[]{"last_write", "fcm_token"});
                             waiting_counsellor_data.setValue(response.toString());
                         } catch (JSONException e) {
                             //e.printStackTrace();
@@ -163,6 +159,7 @@ public class CounsellorMainPresenter {
                                 if (tmp_json.getString("last_write").equals("counsellor")) return;
                                 client_name=tmp_json.getString("client_name");
                                 req_content=tmp_json.getString("req_content");
+                                client_fcm_token=tmp_json.getString("fcm_token");
                             } catch (JSONException e) {
                                 return;
                                 //e.printStackTrace();

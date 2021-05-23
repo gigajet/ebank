@@ -7,6 +7,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.HashMap;
+
 public class Global {
     private static Global instance=new Global();
     private Global() {
@@ -37,6 +39,11 @@ public class Global {
         return fcm_token;
     }
     String fcm_token=null;
+
+    public HashMap<String, Object> getData() {
+        return data;
+    }
+    HashMap<String, Object> data;
 
 
     public static Global getInstance() {
