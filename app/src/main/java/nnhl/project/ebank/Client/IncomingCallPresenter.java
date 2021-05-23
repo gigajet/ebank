@@ -2,6 +2,7 @@ package nnhl.project.ebank.Client;
 
 import android.util.Log;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -36,19 +37,19 @@ public class IncomingCallPresenter {
                 view.accept_call_failure_callback(t.getMessage());
             }
         };
-        JSONObject data=new JSONObject();
-        JSONObject body=new JSONObject();
         try {
+            JSONArray tokens=new JSONArray();
+            tokens.put(Global.getInstance().getData().get(Const.TAG_COUNSELLOR_FCM_TOKEN));
+            JSONObject data=new JSONObject();
+            JSONObject body=new JSONObject();
             data.put(Const.REMOTE_MSG_TYPE, Const.REMOTE_MSG_ACCEPT_CALL);
             data.put(Const.TAG_TOKEN_VIDEOCALL, videocall_token);
             body.put(Const.REMOTE_MSG_DATA, data);
-            body.put(Const.REMOTE_MSG_REGISTRATION_IDS, Global.getInstance().getData().get(
-                    Const.TAG_COUNSELLOR_FCM_TOKEN
-            ));
+            body.put(Const.REMOTE_MSG_REGISTRATION_IDS, tokens);
+            Util.sendRemoteMessage(body.toString(), callback);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Util.sendRemoteMessage(body.toString(), callback);
     }
 
     public void deny_call(String videocall_token) {
@@ -67,19 +68,19 @@ public class IncomingCallPresenter {
                 view.deny_call_failure_callback(t.getMessage());
             }
         };
-        JSONObject data=new JSONObject();
-        JSONObject body=new JSONObject();
         try {
+            JSONArray tokens=new JSONArray();
+            tokens.put(Global.getInstance().getData().get(Const.TAG_COUNSELLOR_FCM_TOKEN));
+            JSONObject data=new JSONObject();
+            JSONObject body=new JSONObject();
             data.put(Const.REMOTE_MSG_TYPE, Const.REMOTE_MSG_DENY_CALL);
             data.put(Const.TAG_TOKEN_VIDEOCALL, videocall_token);
             body.put(Const.REMOTE_MSG_DATA, data);
-            body.put(Const.REMOTE_MSG_REGISTRATION_IDS, Global.getInstance().getData().get(
-                    Const.TAG_COUNSELLOR_FCM_TOKEN
-            ));
+            body.put(Const.REMOTE_MSG_REGISTRATION_IDS, tokens);
+            Util.sendRemoteMessage(body.toString(), callback);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Util.sendRemoteMessage(body.toString(), callback);
     }
 
     public interface View {
