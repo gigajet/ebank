@@ -1,5 +1,7 @@
 package nnhl.project.ebank;
 
+import java.util.HashMap;
+
 public class Const {
     //FirebaseDatabase.getInstance(DB_URL); <- do not leave null here because not us-central1
     //
@@ -22,4 +24,35 @@ public class Const {
         |       |- phone
         |       |- email
      */
+
+    public static final String REMOTE_MSG_TYPE = "type";
+    public static final String REMOTE_MSG_CALL = "call";
+    public static final String REMOTE_MSG_CALL_TOKEN = "jitsi_room";
+    public static final String REMOTE_MSG_AUTHORIZATION = "Authorization";
+    public static final String REMOTE_MSG_CONTENT_TYPE = "Content-Type";
+    public static final String REMOTE_MSG_DATA = "data";
+    public static final String REMOTE_MSG_REGISTRATION_IDS = "registration_ids";
+    public static final String TAG_JUST_FINISH_CALL = "just_finish_call";
+
+    public static final HashMap<String, String> getRemoteHeaders() {
+        HashMap<String, String> header = new HashMap<>();
+        header.put(Const.REMOTE_MSG_AUTHORIZATION,
+                "key=AAAA2CG8k_8:APA91bFDBd9kInDYSMAFNBI944Q-mhnfCaYOyyuZpRkZuwRhy22v2XY-m7n__Kk5mkCcbuN0Jz1yhFbAVZS-aqgH93yAu7UMLq5WUlWQkN3jZun3keM6KPOlMJvAcjapdBic3jGikID0");
+        header.put(Const.REMOTE_MSG_CONTENT_TYPE,
+                "application/json");
+        return header;
+    }
+
+    public static final String REMOTE_MSG_ACCEPT_CALL = "accept";
+    public static final String REMOTE_MSG_DENY_CALL = "deny";
+    public static final String REMOTE_MSG_CANCEL_CALL = "cancel";
+    public static final String REMOTE_MSG_CALL_RESPONSED = "call_response";
+
+    public static final String TAG_CALL_COMPLETE = "call_complete";
+    public static final String TAG_TOKEN_VIDEOCALL = REMOTE_MSG_CALL_TOKEN;
+    public static final String TAG_COUNSELLOR_FCM_TOKEN = "counsellor_fcm";
+    public static final String TAG_WAITING_FOR_CALL = "waiting_for_call";
+    public static final String TAG_INCOMING_STAY = "incoming_stay";
+    public static final String TAG_YES = "yes";
+    public static final String TAG_NO = "no";
 }

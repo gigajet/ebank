@@ -39,7 +39,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-database'
+    implementation  'com.google.firebase:firebase-messaging'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation ('org.jitsi.react:jitsi-meet-sdk:3.0.0') { transitive = true }
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
 }
 apply plugin: 'com.google.gms.google-services'
