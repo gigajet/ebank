@@ -116,6 +116,8 @@ public class IncomingCallActivity extends AppCompatActivity implements IncomingC
 
     @Override
     public void deny_call_sucess() {
+        Intent intent = new Intent(Const.TAG_CALL_COMPLETE);
+        LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
         finish();
     }
 
