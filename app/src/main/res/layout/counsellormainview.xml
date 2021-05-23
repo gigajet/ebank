@@ -219,7 +219,7 @@
 
 			<RelativeLayout android:id="@+id/clientnametext_ek1"
 				android:layout_alignParentBottom="true"
-				android:layout_marginBottom="250dp"
+				android:layout_marginBottom="240dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -284,13 +284,14 @@
 				android:layout_height="wrap_content"
 				android:layout_centerHorizontal="true"
 				android:layout_alignParentBottom="true"
-				android:layout_marginBottom="40dp"
+				android:layout_marginBottom="30dp"
 				>
 
 				<RelativeLayout android:id="@+id/startOption"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
+					android:layout_above="@+id/noteOption"
+					android:layout_marginBottom="5dp"
 					>
 
 					<ImageButton
@@ -315,14 +316,14 @@
 				</RelativeLayout>
 
 				<RelativeLayout
-					android:layout_marginBottom="40dp"
 					android:layout_toRightOf="@+id/startOption"
-					android:layout_marginLeft="40dp"
+					android:layout_above="@+id/noteOption"
+					android:layout_marginLeft="5dp"
+					android:layout_marginBottom="5dp"
 					android:id="@+id/callOption"
 					android:layout_centerHorizontal="true"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
 					>
 
 					<ImageButton
@@ -342,6 +343,62 @@
 						android:layout_centerVertical="true"
 						android:layout_centerInParent="true"
 						android:text="@string/call_string"
+						/>
+
+				</RelativeLayout>
+
+				<RelativeLayout android:id="@+id/noteOption"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					>
+
+					<ImageButton
+						android:foreground="?android:attr/selectableItemBackground"
+						android:id="@+id/noteButton"
+						android:background="@drawable/shadow_button_4"
+						android:layout_width="163dp"
+						android:layout_height="63dp" />
+
+					<TextView android:id="@+id/note"
+						android:textStyle="bold"
+						android:textSize="22sp"
+						android:textColor="@color/you_are_a_counsellor_color"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerHorizontal="true"
+						android:layout_centerVertical="true"
+						android:layout_centerInParent="true"
+						android:text="Create note"
+						/>
+
+				</RelativeLayout>
+
+				<RelativeLayout android:id="@+id/viewnoteOption"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_toRightOf="@+id/noteOption"
+					android:layout_marginLeft="5dp"
+					>
+
+					<ImageButton
+						android:foreground="?android:attr/selectableItemBackground"
+						android:id="@+id/viewNoteButton"
+						android:background="@drawable/shadow_button_4"
+						android:layout_width="163dp"
+						android:layout_height="63dp" />
+
+					<TextView android:id="@+id/viewnote"
+						android:textStyle="bold"
+						android:textSize="22sp"
+						android:textColor="@color/you_are_a_counsellor_color"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerHorizontal="true"
+						android:layout_centerVertical="true"
+						android:layout_centerInParent="true"
+						android:text="View note"
 						/>
 
 				</RelativeLayout>

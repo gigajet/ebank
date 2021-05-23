@@ -1,0 +1,341 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		nnhl
+     *	@date 		1621334150672
+     *	@title 		Page 1
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <RelativeLayout android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:id="@+id/page_counsellormainview_ek1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View android:id="@+id/_bg__counsellormainview_ek2"
+                android:background="@drawable/_bg__counsellormainview_ek2_shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View android:id="@+id/fullbackground_ek3"
+                android:background="@drawable/fullbackground_ek3_shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout android:id="@+id/logo_ek3"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/group_ek8"
+
+                    android:textSize="19sp"
+                    android:textColor="@color/your_satisfaction_our_honor_color"
+                    android:layout_marginLeft="63dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_width="82dp"
+                    android:layout_height="45dp"
+                    android:text="@string/group_ek8_string"
+                    />
+
+                <TextView android:id="@+id/nnhl_ek3"
+
+                    android:textSize="26sp"
+                    android:textColor="@color/your_satisfaction_our_honor_color"
+                    android:layout_marginLeft="63dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="82dp"
+                    android:layout_height="45dp"
+                    android:text="@string/nnhl_ek3_string"
+                    />
+
+
+                <RelativeLayout android:id="@+id/dove_1_ek3"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <RelativeLayout android:id="@+id/group_ek9"
+                        android:layout_marginTop="8.1dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:id="@+id/vector_ek9"
+                            android:layout_width="59.13dp"
+                            android:layout_height="51.8dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:contentDescription="vector_ek9"
+                            android:src="@drawable/vector_ek9" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/logoutOption"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/logo_ek3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/newsTitle"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/you_are_a_counsellor_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Note"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/notecodeOption"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/noteCodeTextview"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/client__color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Note file code"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/clientnametext"
+                android:layout_above="@+id/clientnametext_ek1"
+                android:layout_marginBottom="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/client_"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/client__color"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="@string/client__string"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    />
+
+                <EditText android:id="@+id/clientNameTextview"
+                    android:layout_toRightOf="@+id/client_"
+                    android:background="@drawable/rectangle_3_ek13_shape"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/_____________color"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/clientnametext_ek1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView android:id="@+id/topic_"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/client__color"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="Note:"
+                    android:gravity="center"
+                    />
+
+                <EditText android:id="@+id/requestContentTextview"
+                    android:background="@drawable/rectangle_3_ek13_shape"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/topic_"
+                    android:textSize="19sp"
+                    android:textColor="@color/_____________color"
+                    android:layout_width="280dp"
+                    android:layout_height="265dp"
+                    android:padding="5dp"
+                    android:gravity="start"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/halfbackground_ek3"
+                android:layout_marginTop="354dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView android:id="@+id/rectangle_1_ek3"
+                    android:src="@drawable/rectangle_1_ek3"
+                    android:contentDescription="rectangle_1_ek3"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView android:id="@+id/rectangle_2_ek3"
+                    android:src="@drawable/rectangle_2_ek3"
+                    android:contentDescription="rectangle_2_ek3"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/backOption"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageButton
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/backCreateButton"
+                    android:layout_width="100dp"
+                    android:onClick="onclick_back"
+                    android:layout_height="39dp"
+                    android:background="@drawable/shadow_button_2" />
+
+                <TextView android:id="@+id/back"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="@color/fullbackground_color"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back_string"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/backOption"
+                android:layout_marginBottom="15dp"
+                >
+
+                <RelativeLayout android:id="@+id/generateOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    >
+
+                    <ImageButton
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/createFileButton"
+                        android:background="@drawable/shadow_button_4"
+                        android:layout_width="163dp"
+                        android:layout_height="63dp" />
+
+                    <TextView android:id="@+id/start"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/you_are_a_counsellor_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
+                        android:text="Create file"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/generateOption"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/callOption"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageButton
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/emailButton"
+                        android:background="@drawable/shadow_button_4"
+                        android:layout_width="163dp"
+                        android:layout_height="63dp" />
+
+                    <TextView android:id="@+id/call"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/you_are_a_counsellor_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
+                        android:text="Email"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
