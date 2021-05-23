@@ -108,7 +108,7 @@ public class IncomingCallActivity extends AppCompatActivity implements IncomingC
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 333) {
-            Global.getInstance().getData().put("FLAGF", Const.TAG_YES);
+            Global.getInstance().getData().put(Const.TAG_CALL_COMPLETE, Const.TAG_YES);
             finish();
         }
     }
