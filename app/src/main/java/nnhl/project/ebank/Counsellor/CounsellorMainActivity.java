@@ -67,6 +67,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
             public void onClick(View v) {
                 tvClientName.setText("Getting info...");
                 tvRequestContent.setText("Getting info...");
+                btnStart.setEnabled(false);
                 presenter.start();
             }
         });
@@ -82,6 +83,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
     public void update_client_info(String client_name, String req_content) {
         tvClientName.setText(client_name);
         tvRequestContent.setText(req_content);
+        btnStart.setEnabled(true);
     }
 
     @Override
