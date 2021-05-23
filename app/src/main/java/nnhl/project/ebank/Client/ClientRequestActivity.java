@@ -49,8 +49,8 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     private BroadcastReceiver callResponseReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            setContentView(R.layout.clientrequestview);
-            initRequestComponents();
+            Log.d("BROADCAST","TAG_CALL_COMPLETE received");
+            finish();
         }
     };
 
