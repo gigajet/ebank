@@ -124,7 +124,7 @@
 
 
 
-            <RelativeLayout android:id="@+id/usernameinputtext_ek1"
+            <RelativeLayout android:id="@+id/usernameinputtext_ek11"
                 android:layout_above="@+id/telephoneinputtext"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
@@ -133,7 +133,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/usernameRegisterEdittext"
+                    android:id="@+id/usernameEditProfile"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:background="@drawable/rectangle_3_ek11_shape"
@@ -154,7 +154,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/telephoneEdittext"
+                    android:id="@+id/telephoneEditProfile"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:background="@drawable/rectangle_3_ek9_shape"
@@ -175,7 +175,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/emailEdittext"
+                    android:id="@+id/emailEditProfile"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:background="@drawable/rectangle_3_ek8_shape"
@@ -196,7 +196,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/passwordRegisterEdittext"
+                    android:id="@+id/passwordEditProfile"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:background="@drawable/rectangle_3_ek10_shape"
@@ -216,15 +216,7 @@
                 android:layout_height="wrap_content"
                 >
 
-                <EditText android:id="@+id/securityIDEdittext"
-                    android:background="@drawable/rectangle_3_ek7_shape"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:hint="Security ID"
-                    android:textAlignment="center"
-                    android:textSize="19sp"
-                    android:gravity="center"
-                    />
+
 
             </RelativeLayout>
 
@@ -240,9 +232,8 @@
 
                 <ImageButton
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:id="@+id/backEditButton"
+                    android:id="@+id/backEditProfileButton"
                     android:layout_width="100dp"
-                    android:onClick="onclick_back"
                     android:layout_height="39dp"
                     android:background="@drawable/shadow_button_2" />
 
@@ -293,8 +284,7 @@
 
                 <ImageButton
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:id="@+id/requestButton"
-                    android:onClick="onclick_request"
+                    android:id="@+id/requestEditProfile"
                     android:background="@drawable/shadow_button_5"
                     android:layout_width="288dp"
                     android:layout_height="63dp" />

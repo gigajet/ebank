@@ -22,7 +22,7 @@ public class CounsellorLoginPresenter {
 
     private CounsellorLoginView counsellorLoginView;
     FirebaseDatabase firebase;
-    DatabaseReference data;
+
 
     CounsellorLoginPresenter(CounsellorLoginView v)
     {
