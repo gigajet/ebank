@@ -44,8 +44,9 @@ public class MessageService extends FirebaseMessagingService {
                 //kill activity IncomingCallActivity, but don't know how
                 Global.getInstance().getData().put(Const.TAG_WAITING_FOR_CALL, Const.TAG_NO);
                 Intent intent=new Intent(getApplicationContext(), VideoCallActivity.class);
+                Log.d("ACCEPT_CALL", "Counsellor token: "+remoteMessage.getData().get(Const.TAG_TOKEN_VIDEOCALL))
                 intent.putExtra(Const.TAG_TOKEN_VIDEOCALL,
-                        remoteMessage.getData().get(Const.TAG_COUNSELLOR_FCM_TOKEN));
+                        remoteMessage.getData().get(Const.TAG_TOKEN_VIDEOCALL));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
