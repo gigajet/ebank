@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
 import nnhl.project.ebank.Global;
@@ -22,6 +23,19 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
         setContentView(R.layout.clientrequestview);
         presenter=new ClientRequestPresenter(this);
         initRequestComponents();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String cumback = (String) Global.getInstance().getData().get(Const.TAG_JUST_FINISH_CALL);
+        if (cumback == null || cumback.equals(Const.TAG_NO)) ;
+        else {
+            edClientName.setText(""); edReqContent.setText("");
+            setContentView(R.layout.clientrequestview);
+            initRequestComponents();
+            Global.getInstance().getData().put(Const.TAG_JUST_FINISH_CALL, Const.TAG_NO);
+        }
     }
 
     private void initRequestComponents() {
@@ -41,7 +55,6 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
 
     public void onclick_endrequest(View view) {
         //End request here...
-
         setContentView(R.layout.clientrequestview);
         initRequestComponents();
     }

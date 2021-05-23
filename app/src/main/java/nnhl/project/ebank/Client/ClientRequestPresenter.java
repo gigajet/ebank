@@ -140,6 +140,7 @@ public class ClientRequestPresenter {
 
     private void client_readcomplete() {
         Global.getInstance().getData().put(Const.TAG_COUNSELLOR_FCM_TOKEN, counsellor_fcm_token);
+        Global.getInstance().getData().put(Const.TAG_INCOMING_STAY, Const.TAG_YES);
         Log.d("FCM", "Counsellor fcm token: "+counsellor_fcm_token);
     }
 

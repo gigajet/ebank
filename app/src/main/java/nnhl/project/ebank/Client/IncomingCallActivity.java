@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 
 public class IncomingCallActivity extends AppCompatActivity implements IncomingCallPresenter.View {
@@ -26,6 +27,17 @@ public class IncomingCallActivity extends AppCompatActivity implements IncomingC
         setContentView(R.layout.incomingcallview);
         presenter=new IncomingCallPresenter(this);
         initComponents();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String nenthoatra = (String) Global.getInstance().getData().get(Const.TAG_INCOMING_STAY);
+        if (nenthoatra == null || nenthoatra.equals(Const.TAG_NO)) {
+            Global.getInstance().getData().put(Const.TAG_INCOMING_STAY,Const.TAG_YES);
+            finish();
+        }
+        else ;
     }
 
     private void initComponents() {

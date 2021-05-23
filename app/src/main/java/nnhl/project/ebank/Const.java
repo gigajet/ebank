@@ -32,6 +32,8 @@ public class Const {
     public static final String REMOTE_MSG_CONTENT_TYPE = "Content-Type";
     public static final String REMOTE_MSG_DATA = "data";
     public static final String REMOTE_MSG_REGISTRATION_IDS = "registration_ids";
+    public static final String TAG_JUST_FINISH_CALL = "just_finish_call";
+
     public static final HashMap<String, String> getRemoteHeaders() {
         HashMap<String, String> header = new HashMap<>();
         header.put(Const.REMOTE_MSG_AUTHORIZATION,
@@ -46,6 +48,7 @@ public class Const {
     public static final String TAG_TOKEN_VIDEOCALL = REMOTE_MSG_CALL_TOKEN;
     public static final String TAG_COUNSELLOR_FCM_TOKEN = "counsellor_fcm";
     public static final String TAG_WAITING_FOR_CALL = "waiting_for_call";
+    public static final String TAG_INCOMING_STAY = "incoming_stay";
     public static final String TAG_YES = "yes";
     public static final String TAG_NO = "no";
 }

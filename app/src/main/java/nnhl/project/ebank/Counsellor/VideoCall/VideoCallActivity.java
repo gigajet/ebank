@@ -22,6 +22,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 
 public class VideoCallActivity extends AppCompatActivity {
@@ -77,6 +78,7 @@ public class VideoCallActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
+        Global.getInstance().getData().put(Const.TAG_INCOMING_STAY,Const.TAG_NO);
         super.onDestroy();
     }
 
@@ -118,4 +120,5 @@ public class VideoCallActivity extends AppCompatActivity {
         Intent hangupBroadcastIntent = BroadcastIntentHelper.buildHangUpIntent();
         LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(hangupBroadcastIntent);
     }
+
 }
