@@ -22,6 +22,7 @@ import org.json.JSONObject;
 import nnhl.project.ebank.ApiClient;
 import nnhl.project.ebank.ApiService;
 import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.Util;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -49,7 +50,7 @@ public class CounsellorMainPresenter {
         listen_ref=null;
     }
 
-    boolean is_ready_to_call() {return ready_to_call;}
+    boolean is_ready_to_call() {return ready_to_call && Global.getInstance().get_fcm_token()!=null;}
     String get_videocall_token() {
         return jitsi_room;
     }

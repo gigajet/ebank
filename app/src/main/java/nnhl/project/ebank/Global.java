@@ -14,6 +14,7 @@ public class Global {
     }
 
     private void init_fcm_token() {
+        fcm_token=null;
         FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override

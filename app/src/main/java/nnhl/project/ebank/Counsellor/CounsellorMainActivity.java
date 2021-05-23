@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import nnhl.project.ebank.Counsellor.VideoCall.OutgoingActivity;
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 
 public class CounsellorMainActivity extends AppCompatActivity implements CounsellorMainPresenter.View {
