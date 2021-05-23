@@ -47,6 +47,8 @@ public class Const {
     public static final String REMOTE_MSG_DENY_CALL = "deny";
     public static final String REMOTE_MSG_CANCEL_CALL = "cancel";
     public static final String REMOTE_MSG_CALL_RESPONSED = "call_response";
+
+    public static final String TAG_CALL_COMPLETE = "call_complete";
     public static final String TAG_TOKEN_VIDEOCALL = REMOTE_MSG_CALL_TOKEN;
     public static final String TAG_COUNSELLOR_FCM_TOKEN = "counsellor_fcm";
     public static final String TAG_WAITING_FOR_CALL = "waiting_for_call";

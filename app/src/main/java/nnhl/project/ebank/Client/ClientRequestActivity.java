@@ -2,8 +2,12 @@ package nnhl.project.ebank.Client;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +34,7 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     @Override
     protected void onResume() {
         super.onResume();
+        /*
         String cumback = (String) Global.getInstance().getData().get(Const.TAG_JUST_FINISH_CALL);
         if (cumback == null || cumback.equals(Const.TAG_NO)) ;
         else {
@@ -38,6 +43,28 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
             initRequestComponents();
             Global.getInstance().getData().put(Const.TAG_JUST_FINISH_CALL, Const.TAG_NO);
         }
+        */
+    }
+
+    private BroadcastReceiver callResponseReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            onclick_endrequest(null);
+        }
+    };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(
+                callResponseReceiver,
+                new IntentFilter(Const.TAG_CALL_COMPLETE));
+    }
+
+    @Override
+    protected void onStop() {
+        LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(callResponseReceiver);
+        super.onStop();
     }
 
     private void initRequestComponents() {
@@ -59,12 +86,6 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
         //End request here...
         setContentView(R.layout.clientrequestview);
         initRequestComponents();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        onclick_endrequest(null);
     }
 
     @Override

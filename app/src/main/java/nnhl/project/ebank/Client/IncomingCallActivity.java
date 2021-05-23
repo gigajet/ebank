@@ -101,13 +101,17 @@ public class IncomingCallActivity extends AppCompatActivity implements IncomingC
     public void accept_call_sucess() {
         Intent intent=new Intent(this, VideoCallActivity.class);
         intent.putExtra(Const.TAG_TOKEN_VIDEOCALL, videocall_token);
-        startActivity(intent);
+        startActivityForResult(intent, 333);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        finish();
+        if (requestCode == 333) {
+            Intent intent = new Intent(Const.TAG_CALL_COMPLETE);
+            LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
+            finish();
+        }
     }
 
     @Override
