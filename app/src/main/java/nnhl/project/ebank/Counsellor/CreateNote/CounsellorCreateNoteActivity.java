@@ -18,7 +18,6 @@ public class CounsellorCreateNoteActivity extends AppCompatActivity implements C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.counsellorcreatenoteview);
-        create note
     }
 
     void init()
