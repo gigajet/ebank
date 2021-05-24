@@ -354,11 +354,11 @@
 					>
 
 					<ImageButton
-						android:foreground="?android:attr/selectableItemBackground"
-						android:id="@+id/noteButton"
-						android:background="@drawable/shadow_button_4"
+						android:id="@+id/takeNoteButton"
 						android:layout_width="163dp"
-						android:layout_height="63dp" />
+						android:layout_height="63dp"
+						android:background="@drawable/shadow_button_4"
+						android:foreground="?android:attr/selectableItemBackground" />
 
 					<TextView android:id="@+id/note"
 						android:textStyle="bold"

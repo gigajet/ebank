@@ -127,7 +127,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/requestContentEdittext"
+                    android:id="@+id/viewSearchNoteEditText"
                     android:layout_width="280dp"
                     android:layout_height="265dp"
                     android:background="@drawable/rectangle_3_ek13_shape"

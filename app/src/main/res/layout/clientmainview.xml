@@ -102,7 +102,7 @@
                 android:layout_height="360dp"
                 >
 
-                <GridView android:id="@+id/requestContentEdittext"
+                <GridView android:id="@+id/viewSearchNoteEditText"
                     android:background="#E00094FF"
                     android:textStyle="bold"
                     android:textSize="19sp"

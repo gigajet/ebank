@@ -19,6 +19,7 @@ import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Counsellor.VideoCall.OutgoingActivity;
 
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Counsellor.ViewNote.CounsellorViewNoteActivity;
 import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 
@@ -26,7 +27,6 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
 
     private ImageButton btnLogout;
     CounsellorMainPresenter presenter;
-    private ImageButton btnCall, btnStart,btnEdit;
     TextView tvRequestContent, tvClientName;
     String account;
     @Override
@@ -39,6 +39,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
         initComponents();
     }
 
+    private ImageButton btnCall, btnStart,btnEdit , btnTakeNote,btnViewNote;
     private void initComponents() {
         btnLogout=findViewById(R.id.logoutButton);
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +88,23 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
                 tvRequestContent.setText("Getting info...");
                 btnStart.setEnabled(false);
                 presenter.start();
+            }
+        });
+
+        btnTakeNote = findViewById(R.id.takeNoteButton);
+        btnTakeNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CounsellorMainActivity.this,CounsellorCreateNoteActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnViewNote = findViewById(R.id.viewNoteButton);
+        btnViewNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CounsellorMainActivity.this, CounsellorViewNoteActivity.class);
+                startActivity(intent);
             }
         });
     }

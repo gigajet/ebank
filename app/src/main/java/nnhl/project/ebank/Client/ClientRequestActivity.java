@@ -1,22 +1,13 @@
 package nnhl.project.ebank.Client;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import nnhl.project.ebank.Const;
-import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
-import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
 import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 public class ClientRequestActivity extends AppCompatActivity implements ClientRequestPresenter.View {
@@ -58,7 +49,7 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
 
     private void initRequestComponents() {
         edClientName=findViewById(R.id.clientNameEdittext);
-        edReqContent=findViewById(R.id.requestContentEdittext);
+        edReqContent=findViewById(R.id.viewSearchNoteEditText);
     }
 
     public void onclick_back(View view) {
