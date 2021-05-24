@@ -21,6 +21,8 @@ import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 
 public class VideoCallActivity extends AppCompatActivity {
@@ -60,7 +62,7 @@ public class VideoCallActivity extends AppCompatActivity {
 
         registerForBroadcastMessages();
 
-        String text=getIntent().getStringExtra("jitsi_room");
+        String text=getIntent().getStringExtra(Const.TAG_TOKEN_VIDEOCALL);
         JitsiMeetConferenceOptions options
                 = new JitsiMeetConferenceOptions.Builder()
                 .setRoom(text)
@@ -108,6 +110,9 @@ public class VideoCallActivity extends AppCompatActivity {
                 case PARTICIPANT_JOINED:
                     Log.i(TAG,"Participant joined%s" + event.getData().get("name"));
                     break;
+                case CONFERENCE_TERMINATED:
+                    finish();
+                    break;
             }
         }
     }
@@ -117,4 +122,5 @@ public class VideoCallActivity extends AppCompatActivity {
         Intent hangupBroadcastIntent = BroadcastIntentHelper.buildHangUpIntent();
         LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(hangupBroadcastIntent);
     }
+
 }

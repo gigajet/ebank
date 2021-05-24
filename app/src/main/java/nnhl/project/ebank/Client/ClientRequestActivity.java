@@ -1,15 +1,23 @@
 package nnhl.project.ebank.Client;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
+import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 public class ClientRequestActivity extends AppCompatActivity implements ClientRequestPresenter.View {
     EditText edClientName,edReqContent;
@@ -23,6 +31,31 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
         initRequestComponents();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        /*
+        String cumback = (String) Global.getInstance().getData().get(Const.TAG_JUST_FINISH_CALL);
+        if (cumback == null || cumback.equals(Const.TAG_NO)) ;
+        else {
+            edClientName.setText(""); edReqContent.setText("");
+            setContentView(R.layout.clientrequestview);
+            initRequestComponents();
+            Global.getInstance().getData().put(Const.TAG_JUST_FINISH_CALL, Const.TAG_NO);
+        }
+        */
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String tmp = (String) Global.getInstance().getData().get(Const.TAG_CALL_COMPLETE);
+        if (tmp!=null && tmp.equals(Const.TAG_YES)) {
+            Global.getInstance().getData().put(Const.TAG_CALL_COMPLETE, Const.TAG_NO);
+            finish();
+        }
+    }
+
     private void initRequestComponents() {
         edClientName=findViewById(R.id.clientNameEdittext);
         edReqContent=findViewById(R.id.requestContentEdittext);
@@ -33,13 +66,13 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     }
 
     public void onclick_request(View view) {
-        presenter.request(edClientName.getText().toString(), edReqContent.getText().toString());
+        presenter.request(edClientName.getText().toString(), edReqContent.getText().toString(),
+                Global.getInstance().get_fcm_token());
         setContentView(R.layout.clientwaitingview);
     }
 
     public void onclick_endrequest(View view) {
         //End request here...
-
         setContentView(R.layout.clientrequestview);
         initRequestComponents();
     }
@@ -47,8 +80,10 @@ public class ClientRequestActivity extends AppCompatActivity implements ClientRe
     @Override
     public void fetch_callback(String videocall_token) {
         Log.d(TAG,"Jitsi token: "+videocall_token);
+        /*
         Intent intent=new Intent(ClientRequestActivity.this, VideoCallActivity.class);
         intent.putExtra("jitsi_room", videocall_token);
         startActivity(intent);
+         */
     }
 }

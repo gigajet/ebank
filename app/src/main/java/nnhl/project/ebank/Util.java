@@ -1,5 +1,9 @@
 package nnhl.project.ebank;
 
+import android.util.Log;
+
+import retrofit2.Callback;
+
 public class Util {
     public static String RandomAlphanumeric (int n) {
         String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -27,5 +31,12 @@ public class Util {
 
     public static String RandomJitsiRoomName() {
         return "nnhl-ebank-"+RandomAlphanumeric(15);
+    }
+
+    public static void sendRemoteMessage (String remoteMessageBody, Callback<String> callback) {
+        Log.d("FCM", "sendRemoteMessage: "+remoteMessageBody);
+        ApiClient.getInstance().create(ApiService.class)
+                .sendRemoteMessage(Const.getRemoteHeaders(), remoteMessageBody)
+                .enqueue(callback);
     }
 }

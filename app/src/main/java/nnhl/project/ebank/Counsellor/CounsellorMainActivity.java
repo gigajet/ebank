@@ -11,9 +11,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import nnhl.project.ebank.Counsellor.EditProfile.CounsellorEditProfileActivity;
 import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
+import nnhl.project.ebank.Const;
+import nnhl.project.ebank.Counsellor.VideoCall.OutgoingActivity;
+
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
+import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
 
 public class CounsellorMainActivity extends AppCompatActivity implements CounsellorMainPresenter.View {
@@ -51,10 +56,13 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
                 }
                 else {
                     //Call code
+                    /*
                     String jitsi_room=presenter.get_videocall_token();
                     Intent intent=new Intent(CounsellorMainActivity.this, VideoCallActivity.class);
                     intent.putExtra("jitsi_room", presenter.get_videocall_token());
                     startActivity(intent);
+                     */
+                    presenter.call();
                 }
             }
         });
@@ -76,6 +84,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
             public void onClick(View v) {
                 tvClientName.setText("Getting info...");
                 tvRequestContent.setText("Getting info...");
+                btnStart.setEnabled(false);
                 presenter.start();
             }
         });
@@ -83,8 +92,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
-        tvRequestContent.setText("");
-        tvClientName.setText("");
+        update_client_info("", "");
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -92,5 +100,21 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
     public void update_client_info(String client_name, String req_content) {
         tvClientName.setText(client_name);
         tvRequestContent.setText(req_content);
+        btnStart.setEnabled(true);
+    }
+
+    @Override
+    public void call_failure(String error_msg) {
+        Toast.makeText(this, error_msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void call_sucess() {
+        Toast.makeText(this, "FCM sent to client", Toast.LENGTH_SHORT).show();
+        Global.getInstance().getData().put(Const.TAG_WAITING_FOR_CALL, Const.TAG_YES);
+        Intent intent=new Intent(this, OutgoingActivity.class);
+        intent.putExtra("jitsi_room", presenter.get_videocall_token());
+        intent.putExtra("client_fcm", presenter.get_client_fcm_token());
+        startActivity(intent);
     }
 }
