@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import nnhl.project.ebank.Counsellor.CounsellorMainActivity;
+import nnhl.project.ebank.Counsellor.CreateNote.CounsellorCreateNoteActivity;
 import nnhl.project.ebank.Counsellor.Register.CounsellorRegisterActivity;
 import nnhl.project.ebank.R;
 public class CounsellorLoginActivity extends AppCompatActivity implements CounsellorLoginPresenter.CounsellorLoginView{
@@ -61,7 +62,8 @@ public class CounsellorLoginActivity extends AppCompatActivity implements Counse
     @Override
     public void ActionLoginSuccess() {
         Toast.makeText(CounsellorLoginActivity.this,"Login successfully",Toast.LENGTH_LONG).show();
-        Intent intent=new Intent(CounsellorLoginActivity.this, CounsellorMainActivity.class);
+        Intent intent=new Intent(CounsellorLoginActivity.this, CounsellorCreateNoteActivity.class);
+        intent.putExtra("Account",accountEditText.getText().toString());
         startActivity(intent);
     }
 

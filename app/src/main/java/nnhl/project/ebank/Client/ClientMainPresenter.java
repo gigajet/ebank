@@ -68,8 +68,6 @@ public class ClientMainPresenter {
             }
         });
     }
-
-
     public interface ClientMainView
     {
         public void updateImageView1(String ImgLink);

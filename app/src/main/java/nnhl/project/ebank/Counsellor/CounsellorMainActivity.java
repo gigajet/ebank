@@ -11,8 +11,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import nnhl.project.ebank.Counsellor.EditProfile.CounsellorEditProfileActivity;
+import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
 import nnhl.project.ebank.Const;
 import nnhl.project.ebank.Counsellor.VideoCall.OutgoingActivity;
+
 import nnhl.project.ebank.Counsellor.VideoCall.VideoCallActivity;
 import nnhl.project.ebank.Global;
 import nnhl.project.ebank.R;
@@ -21,14 +25,16 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
 
     private ImageButton btnLogout;
     CounsellorMainPresenter presenter;
-    private ImageButton btnCall, btnStart;
+    private ImageButton btnCall, btnStart,btnEdit;
     TextView tvRequestContent, tvClientName;
-
+    String account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.counsellormainview);
         presenter=new CounsellorMainPresenter(this);
+        Intent temp = getIntent();
+        account = temp.getStringExtra("Account");
         initComponents();
     }
 
@@ -58,6 +64,16 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
                      */
                     presenter.call();
                 }
+            }
+        });
+        btnEdit = findViewById(R.id.editButton);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(CounsellorMainActivity.this, CounsellorEditProfileActivity.class);
+                intent.putExtra("AccountName",account);
+                startActivity(intent);
+
             }
         });
         tvRequestContent=findViewById(R.id.requestContentTextview);
