@@ -119,29 +119,37 @@
 
             </RelativeLayout>
 
-            <RelativeLayout android:id="@+id/notecodeOption"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="11dp"
-                android:layout_marginRight="11dp"
+            <RelativeLayout android:id="@+id/sendemailOption"
+                android:layout_above="@+id/clientnametext"
+                android:layout_marginBottom="8dp"
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 >
 
-                <EditText android:id="@+id/emailNote"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/client__color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="Note file code"
-                    android:textAlignment="center"
+                <TextView
+                    android:id="@+id/emailtitle"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
                     android:gravity="center"
-                    />
+                    android:text="Email to: "
+                    android:textColor="@color/client__color"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/emailNote"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@+id/emailtitle"
+                    android:background="@drawable/rectangle_3_ek13_shape"
+                    android:gravity="center"
+                    android:textColor="@color/_____________color"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
-
 
             <RelativeLayout android:id="@+id/clientnametext"
                 android:layout_above="@+id/clientnametext_ek1"
@@ -177,7 +185,7 @@
 
             <RelativeLayout android:id="@+id/clientnametext_ek1"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="250dp"
+                android:layout_marginBottom="220dp"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -249,7 +257,6 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:id="@+id/backCreateButton"
                     android:layout_width="100dp"
-                    android:onClick="onclick_back"
                     android:layout_height="39dp"
                     android:background="@drawable/shadow_button_2" />
 
@@ -286,7 +293,7 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:id="@+id/createFileButton"
                         android:background="@drawable/shadow_button_4"
-                        android:layout_width="163dp"
+                        android:layout_width="288dp"
                         android:layout_height="63dp" />
 
                     <TextView android:id="@+id/start"
@@ -299,37 +306,6 @@
                         android:layout_centerVertical="true"
                         android:layout_centerInParent="true"
                         android:text="Create file"
-                        />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_toRightOf="@+id/generateOption"
-                    android:layout_marginLeft="5dp"
-                    android:layout_alignParentBottom="true"
-                    android:id="@+id/callOption"
-                    android:layout_centerHorizontal="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <ImageButton
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:id="@+id/emailButton"
-                        android:background="@drawable/shadow_button_4"
-                        android:layout_width="163dp"
-                        android:layout_height="63dp" />
-
-                    <TextView android:id="@+id/call"
-                        android:textStyle="bold"
-                        android:textSize="22sp"
-                        android:textColor="@color/you_are_a_counsellor_color"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_centerInParent="true"
-                        android:text="Email"
                         />
 
                 </RelativeLayout>

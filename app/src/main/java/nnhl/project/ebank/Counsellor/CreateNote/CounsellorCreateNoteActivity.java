@@ -12,7 +12,7 @@ import android.widget.Toast;
 import nnhl.project.ebank.R;
 public class CounsellorCreateNoteActivity extends AppCompatActivity implements CounsellorCreateNotePresenter.CounsellorCreateNoteView {
     EditText clienEditText, noteEditText, emailEditText;
-    ImageButton createFileBtn;
+    ImageButton createFileBtn, back;
     CounsellorCreateNotePresenter counsellorCreateNotePresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class CounsellorCreateNoteActivity extends AppCompatActivity implements C
         noteEditText = findViewById(R.id.requestContentNote);
         emailEditText = findViewById(R.id.emailNote);
         createFileBtn = findViewById(R.id.createFileButton);
+        back = findViewById(R.id.backCreateButton);
 
         createFileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,12 @@ public class CounsellorCreateNoteActivity extends AppCompatActivity implements C
             }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
