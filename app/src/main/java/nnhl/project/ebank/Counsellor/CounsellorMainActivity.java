@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import nnhl.project.ebank.Counsellor.CreateNote.CounsellorCreateNoteActivity;
 import nnhl.project.ebank.Counsellor.EditProfile.CounsellorEditProfileActivity;
 import nnhl.project.ebank.Counsellor.Login.CounsellorLoginActivity;
 import nnhl.project.ebank.Const;
@@ -92,8 +93,13 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
-        update_client_info("", "");
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 666) { //comes back from call
+            update_client_info("", "");
+            Intent intent=new Intent(this, CounsellorCreateNoteActivity.class);
+            startActivity(intent);
+        }
+
     }
 
     @Override
@@ -115,6 +121,6 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
         Intent intent=new Intent(this, OutgoingActivity.class);
         intent.putExtra("jitsi_room", presenter.get_videocall_token());
         intent.putExtra("client_fcm", presenter.get_client_fcm_token());
-        startActivity(intent);
+        startActivityForResult(intent, 666);
     }
 }
