@@ -96,6 +96,7 @@ public class CounsellorMainActivity extends AppCompatActivity implements Counsel
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 666) { //comes back from call
             update_client_info("", "");
+            presenter.reset_after_call();
             Intent intent=new Intent(this, CounsellorCreateNoteActivity.class);
             startActivity(intent);
         }
