@@ -18,6 +18,7 @@ public class CounsellorCreateNoteActivity extends AppCompatActivity implements C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.counsellorcreatenoteview);
+        init();
     }
 
     void init()
@@ -44,10 +45,10 @@ public class CounsellorCreateNoteActivity extends AppCompatActivity implements C
         Intent intent =  new Intent(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_EMAIL,
                 new String[] { emailEditText.getText().toString() });
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Dear" + clienEditText.getText().toString());
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Dear Mr/Mrs " + clienEditText.getText().toString());
         intent.putExtra(Intent.EXTRA_TEXT, noteEditText.getText().toString());
         intent.setType("message/rfc822");
-        startActivity(Intent.createChooser(intent, "Choose an Email client :"));
+        startActivity(intent);
 
     }
 

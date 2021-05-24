@@ -38,7 +38,7 @@ public class CounsellorCreateNotePresenter {
     }
     void createNoteAndEmail(String clientName, String clientMail, String noteContent)
     {
-        if(clientMail.isEmpty() || clientMail.isEmpty() || noteContent.isEmpty())
+        if(clientMail.isEmpty() || clientName.isEmpty() || noteContent.isEmpty())
         {
 
             return;
@@ -54,7 +54,7 @@ public class CounsellorCreateNotePresenter {
                     map.put("clientMail", clientMail);
                     map.put("noteContent", noteContent);
                     map.put("token",token);
-                    firebaseDatabase.getReference(Const.TBL_counsellors).child(token).updateChildren(map)
+                    firebaseDatabase.getReference(Const.TBL_NOTES).child(token).updateChildren(map)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
