@@ -10,7 +10,8 @@
         android:icon="@drawable/vector_ek3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Counsellor.EditProfile.CounsellorEditProfileActivity"></activity>
+        <activity android:name=".Counsellor.CreateNote.CounsellorCreateNoteActivity"></activity>
+        <activity android:name=".Counsellor.EditProfile.CounsellorEditProfileActivity" />
         <activity android:name=".Counsellor.VideoCall.VideoCallActivity" />
         <activity android:name=".Client.ClientRequestActivity" />
         <activity android:name=".Client.ClientMainActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->

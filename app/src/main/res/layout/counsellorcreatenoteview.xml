@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 >
 
-                <TextView android:id="@+id/noteCodeTextview"
+                <EditText android:id="@+id/emailNote"
                     android:textStyle="bold"
                     android:textSize="19sp"
                     android:layout_marginTop="10dp"
@@ -162,16 +162,17 @@
                     android:gravity="center"
                     />
 
-                <EditText android:id="@+id/clientNameTextview"
-                    android:layout_toRightOf="@+id/client_"
-                    android:background="@drawable/rectangle_3_ek13_shape"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/_____________color"
+                <EditText
+                    android:id="@+id/clientNameNote"
                     android:layout_width="280dp"
                     android:layout_height="40dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@+id/client_"
+                    android:background="@drawable/rectangle_3_ek13_shape"
                     android:gravity="center"
-                    />
+                    android:textColor="@color/_____________color"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -194,7 +195,7 @@
                     android:gravity="center"
                     />
 
-                <EditText android:id="@+id/requestContentTextview"
+                <EditText android:id="@+id/requestContentNote"
                     android:background="@drawable/rectangle_3_ek13_shape"
                     android:textStyle="bold"
                     android:layout_toRightOf="@+id/topic_"

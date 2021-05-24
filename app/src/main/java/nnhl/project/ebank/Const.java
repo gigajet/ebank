@@ -9,6 +9,7 @@ public class Const {
     public static final String TBL_SID="SID";
     public static final String TBL_WAITING_COUNSELLOR="waiting-counsellors";
     public static final String TBL_WAITING_CLIENTS="waiting-clients";
+    public static final String TBL_NOTES="Notes";
     /*
     DB Scheme:
      --SID
