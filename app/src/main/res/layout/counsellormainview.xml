@@ -211,7 +211,6 @@
 					android:textColor="@color/_____________color"
 					android:layout_width="280dp"
 					android:layout_height="40dp"
-					android:text="@string/nguyen_van_a_ek2_string"
 					android:gravity="center"
 					/>
 
@@ -219,7 +218,7 @@
 
 			<RelativeLayout android:id="@+id/clientnametext_ek1"
 				android:layout_alignParentBottom="true"
-				android:layout_marginBottom="240dp"
+				android:layout_marginBottom="250dp"
 				android:layout_centerHorizontal="true"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -244,7 +243,6 @@
 					android:textColor="@color/_____________color"
 					android:layout_width="280dp"
 					android:layout_height="265dp"
-					android:text="@string/request_content_string"
 					android:padding="5dp"
 					/>
 
