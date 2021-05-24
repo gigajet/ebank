@@ -62,8 +62,12 @@ public class CounsellorLoginActivity extends AppCompatActivity implements Counse
     @Override
     public void ActionLoginSuccess() {
         Toast.makeText(CounsellorLoginActivity.this,"Login successfully",Toast.LENGTH_LONG).show();
+        //TODO Change this if not what NTVinh & LHNhan & NLMinh & HMHuy wants
+        /*
         Intent intent=new Intent(CounsellorLoginActivity.this, CounsellorCreateNoteActivity.class);
         intent.putExtra("Account",accountEditText.getText().toString());
+         */
+        Intent intent=new Intent(CounsellorLoginActivity.this, CounsellorMainActivity.class);
         startActivity(intent);
     }
 

@@ -66,4 +66,9 @@ public class CounsellorCreateNoteActivity extends AppCompatActivity implements C
     public void ActionWrongFormat() {
         Toast.makeText(CounsellorCreateNoteActivity.this, "Wrong format, please fill in every field before create a new note", Toast.LENGTH_SHORT).show();
     }
+
+    public void onclick_back(View view) {
+        //TODO change back button behavior if it is not what you want
+        finish();
+    }
 }
