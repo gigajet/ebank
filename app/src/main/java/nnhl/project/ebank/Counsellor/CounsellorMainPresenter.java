@@ -51,6 +51,9 @@ public class CounsellorMainPresenter {
     }
 
     boolean is_ready_to_call() {return ready_to_call && Global.getInstance().get_fcm_token()!=null;}
+    void reset_after_call () {
+        ready_to_call = false;
+    }
     String get_videocall_token() {
         return jitsi_room;
     }
