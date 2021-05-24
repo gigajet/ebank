@@ -28,7 +28,7 @@ public class ClientMainPresenter {
         clientMainView = v;
         firebase = FirebaseDatabase.getInstance(Const.DB_URL);
     }
-    void  uploadImage()
+    void loadAds()
     {
 
         Query query = firebase.getReference().child(Const.TBL_ADS);

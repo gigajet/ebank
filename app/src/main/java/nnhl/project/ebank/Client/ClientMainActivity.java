@@ -29,7 +29,7 @@ public class ClientMainActivity extends AppCompatActivity implements ClientMainP
 
         textView1.setVisibility(View.VISIBLE);
         textView2.setVisibility(View.VISIBLE);
-        clientMainPresenter.uploadImage();
+        clientMainPresenter.loadAds();
         //imgView.setImageResource(R.drawable.picture1);
 
     }
