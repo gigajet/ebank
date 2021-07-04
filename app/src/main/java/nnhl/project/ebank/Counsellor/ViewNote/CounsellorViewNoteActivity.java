@@ -10,11 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import nnhl.project.ebank.R;
+
 public class CounsellorViewNoteActivity extends AppCompatActivity implements CounsellorViewNotePresenter.CounsellorViewNoteView {
     EditText tokenEditText;
     TextView noteContentEditText;
     ImageButton viewNoteBtn, backSearchButton;
     CounsellorViewNotePresenter counsellorViewNotePresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,7 @@ public class CounsellorViewNoteActivity extends AppCompatActivity implements Cou
                 counsellorViewNotePresenter.viewNote(tokenEditText.getText().toString());
             }
         });
-        backSearchButton=findViewById(R.id.backSearchButton);
+        backSearchButton = findViewById(R.id.backSearchButton);
         backSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,14 +42,14 @@ public class CounsellorViewNoteActivity extends AppCompatActivity implements Cou
 
     @Override
     public void ActionSuccess(String token, String clientName, String clientMail, String noteContent) {
-        Toast.makeText(CounsellorViewNoteActivity.this,"View note successful",Toast.LENGTH_LONG).show();
+        Toast.makeText(CounsellorViewNoteActivity.this, "View note successful", Toast.LENGTH_LONG).show();
         tokenEditText.setText(token);
-        noteContentEditText.setText("Dear Mr/Mrs "+ clientName +"\n" + "Gmail: " +clientMail + "\n" + noteContent);
+        noteContentEditText.setText("Dear Mr/Mrs " + clientName + "\n" + "Gmail: " + clientMail + "\n" + noteContent);
 
     }
 
     @Override
     public void ActionFail() {
-        Toast.makeText(CounsellorViewNoteActivity.this,"View note failed",Toast.LENGTH_LONG).show();
+        Toast.makeText(CounsellorViewNoteActivity.this, "View note failed", Toast.LENGTH_LONG).show();
     }
 }
