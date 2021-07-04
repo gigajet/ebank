@@ -13,7 +13,7 @@ import nnhl.project.ebank.R;
 public class CounsellorViewNoteActivity extends AppCompatActivity implements CounsellorViewNotePresenter.CounsellorViewNoteView {
     EditText tokenEditText;
     TextView noteContentEditText;
-    ImageButton viewNoteBtn;
+    ImageButton viewNoteBtn, backSearchButton;
     CounsellorViewNotePresenter counsellorViewNotePresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,13 @@ public class CounsellorViewNoteActivity extends AppCompatActivity implements Cou
             @Override
             public void onClick(View v) {
                 counsellorViewNotePresenter.viewNote(tokenEditText.getText().toString());
+            }
+        });
+        backSearchButton=findViewById(R.id.backSearchButton);
+        backSearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
